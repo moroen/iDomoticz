@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24108ECD280A333200BD4CAB /* iDomoticzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ECC280A333200BD4CAB /* iDomoticzApp.swift */; };
+		24108ECF280A333200BD4CAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ECE280A333200BD4CAB /* ContentView.swift */; };
+		24108ED1280A333500BD4CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24108ED0280A333500BD4CAB /* Assets.xcassets */; };
+		24108ED4280A333500BD4CAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24108ED3280A333500BD4CAB /* Preview Assets.xcassets */; };
+		24108ED6280A333500BD4CAB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ED5280A333500BD4CAB /* Persistence.swift */; };
+		24108ED9280A333500BD4CAB /* iDomoticz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24108ED7280A333500BD4CAB /* iDomoticz.xcdatamodeld */; };
+		24108EE3280A333500BD4CAB /* iDomoticzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108EE2280A333500BD4CAB /* iDomoticzTests.swift */; };
+		24108EED280A333500BD4CAB /* iDomoticzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108EEC280A333500BD4CAB /* iDomoticzUITests.swift */; };
+		24108EEF280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108EEE280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24108EDF280A333500BD4CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24108EC1280A333200BD4CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24108EC8280A333200BD4CAB;
+			remoteInfo = iDomoticz;
+		};
+		24108EE9280A333500BD4CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24108EC1280A333200BD4CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24108EC8280A333200BD4CAB;
+			remoteInfo = iDomoticz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24108EC9280A333200BD4CAB /* iDomoticz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDomoticz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24108ECC280A333200BD4CAB /* iDomoticzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticzApp.swift; sourceTree = "<group>"; };
+		24108ECE280A333200BD4CAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		24108ED0280A333500BD4CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24108ED3280A333500BD4CAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		24108ED5280A333500BD4CAB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		24108ED8280A333500BD4CAB /* iDomoticz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iDomoticz.xcdatamodel; sourceTree = "<group>"; };
+		24108EDE280A333500BD4CAB /* iDomoticzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDomoticzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24108EE2280A333500BD4CAB /* iDomoticzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticzTests.swift; sourceTree = "<group>"; };
+		24108EE8280A333500BD4CAB /* iDomoticzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDomoticzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24108EEC280A333500BD4CAB /* iDomoticzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticzUITests.swift; sourceTree = "<group>"; };
+		24108EEE280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticzUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24108EC6280A333200BD4CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24108EDB280A333500BD4CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24108EE5280A333500BD4CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24108EC0280A333200BD4CAB = {
+			isa = PBXGroup;
+			children = (
+				24108ECB280A333200BD4CAB /* iDomoticz */,
+				24108EE1280A333500BD4CAB /* iDomoticzTests */,
+				24108EEB280A333500BD4CAB /* iDomoticzUITests */,
+				24108ECA280A333200BD4CAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24108ECA280A333200BD4CAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24108EC9280A333200BD4CAB /* iDomoticz.app */,
+				24108EDE280A333500BD4CAB /* iDomoticzTests.xctest */,
+				24108EE8280A333500BD4CAB /* iDomoticzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24108ECB280A333200BD4CAB /* iDomoticz */ = {
+			isa = PBXGroup;
+			children = (
+				24108ECC280A333200BD4CAB /* iDomoticzApp.swift */,
+				24108ECE280A333200BD4CAB /* ContentView.swift */,
+				24108ED0280A333500BD4CAB /* Assets.xcassets */,
+				24108ED5280A333500BD4CAB /* Persistence.swift */,
+				24108ED7280A333500BD4CAB /* iDomoticz.xcdatamodeld */,
+				24108ED2280A333500BD4CAB /* Preview Content */,
+			);
+			path = iDomoticz;
+			sourceTree = "<group>";
+		};
+		24108ED2280A333500BD4CAB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				24108ED3280A333500BD4CAB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		24108EE1280A333500BD4CAB /* iDomoticzTests */ = {
+			isa = PBXGroup;
+			children = (
+				24108EE2280A333500BD4CAB /* iDomoticzTests.swift */,
+			);
+			path = iDomoticzTests;
+			sourceTree = "<group>";
+		};
+		24108EEB280A333500BD4CAB /* iDomoticzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				24108EEC280A333500BD4CAB /* iDomoticzUITests.swift */,
+				24108EEE280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift */,
+			);
+			path = iDomoticzUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24108EC8280A333200BD4CAB /* iDomoticz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24108EF2280A333500BD4CAB /* Build configuration list for PBXNativeTarget "iDomoticz" */;
+			buildPhases = (
+				24108EC5280A333200BD4CAB /* Sources */,
+				24108EC6280A333200BD4CAB /* Frameworks */,
+				24108EC7280A333200BD4CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDomoticz;
+			productName = iDomoticz;
+			productReference = 24108EC9280A333200BD4CAB /* iDomoticz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24108EDD280A333500BD4CAB /* iDomoticzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24108EF5280A333500BD4CAB /* Build configuration list for PBXNativeTarget "iDomoticzTests" */;
+			buildPhases = (
+				24108EDA280A333500BD4CAB /* Sources */,
+				24108EDB280A333500BD4CAB /* Frameworks */,
+				24108EDC280A333500BD4CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24108EE0280A333500BD4CAB /* PBXTargetDependency */,
+			);
+			name = iDomoticzTests;
+			productName = iDomoticzTests;
+			productReference = 24108EDE280A333500BD4CAB /* iDomoticzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		24108EE7280A333500BD4CAB /* iDomoticzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24108EF8280A333500BD4CAB /* Build configuration list for PBXNativeTarget "iDomoticzUITests" */;
+			buildPhases = (
+				24108EE4280A333500BD4CAB /* Sources */,
+				24108EE5280A333500BD4CAB /* Frameworks */,
+				24108EE6280A333500BD4CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24108EEA280A333500BD4CAB /* PBXTargetDependency */,
+			);
+			name = iDomoticzUITests;
+			productName = iDomoticzUITests;
+			productReference = 24108EE8280A333500BD4CAB /* iDomoticzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24108EC1280A333200BD4CAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					24108EC8280A333200BD4CAB = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					24108EDD280A333500BD4CAB = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 24108EC8280A333200BD4CAB;
+					};
+					24108EE7280A333500BD4CAB = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 24108EC8280A333200BD4CAB;
+					};
+				};
+			};
+			buildConfigurationList = 24108EC4280A333200BD4CAB /* Build configuration list for PBXProject "iDomoticz" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24108EC0280A333200BD4CAB;
+			productRefGroup = 24108ECA280A333200BD4CAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24108EC8280A333200BD4CAB /* iDomoticz */,
+				24108EDD280A333500BD4CAB /* iDomoticzTests */,
+				24108EE7280A333500BD4CAB /* iDomoticzUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24108EC7280A333200BD4CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24108ED4280A333500BD4CAB /* Preview Assets.xcassets in Resources */,
+				24108ED1280A333500BD4CAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24108EDC280A333500BD4CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24108EE6280A333500BD4CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24108EC5280A333200BD4CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24108ED9280A333500BD4CAB /* iDomoticz.xcdatamodeld in Sources */,
+				24108ED6280A333500BD4CAB /* Persistence.swift in Sources */,
+				24108ECF280A333200BD4CAB /* ContentView.swift in Sources */,
+				24108ECD280A333200BD4CAB /* iDomoticzApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24108EDA280A333500BD4CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24108EE3280A333500BD4CAB /* iDomoticzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24108EE4280A333500BD4CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24108EED280A333500BD4CAB /* iDomoticzUITests.swift in Sources */,
+				24108EEF280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24108EE0280A333500BD4CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24108EC8280A333200BD4CAB /* iDomoticz */;
+			targetProxy = 24108EDF280A333500BD4CAB /* PBXContainerItemProxy */;
+		};
+		24108EEA280A333500BD4CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24108EC8280A333200BD4CAB /* iDomoticz */;
+			targetProxy = 24108EE9280A333500BD4CAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24108EF0280A333500BD4CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Debug;
+		};
+		24108EF1280A333500BD4CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24108EF3280A333500BD4CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iDomoticz/Preview Content\"";
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iDomoticz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		24108EF4280A333500BD4CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iDomoticz/Preview Content\"";
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iDomoticz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		24108EF6280A333500BD4CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iDomoticzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDomoticz.app/iDomoticz";
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Debug;
+		};
+		24108EF7280A333500BD4CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iDomoticzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDomoticz.app/iDomoticz";
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Release;
+		};
+		24108EF9280A333500BD4CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iDomoticzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = iDomoticz;
+			};
+			name = Debug;
+		};
+		24108EFA280A333500BD4CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iDomoticzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = iDomoticz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24108EC4280A333200BD4CAB /* Build configuration list for PBXProject "iDomoticz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24108EF0280A333500BD4CAB /* Debug */,
+				24108EF1280A333500BD4CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24108EF2280A333500BD4CAB /* Build configuration list for PBXNativeTarget "iDomoticz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24108EF3280A333500BD4CAB /* Debug */,
+				24108EF4280A333500BD4CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24108EF5280A333500BD4CAB /* Build configuration list for PBXNativeTarget "iDomoticzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24108EF6280A333500BD4CAB /* Debug */,
+				24108EF7280A333500BD4CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24108EF8280A333500BD4CAB /* Build configuration list for PBXNativeTarget "iDomoticzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24108EF9280A333500BD4CAB /* Debug */,
+				24108EFA280A333500BD4CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		24108ED7280A333500BD4CAB /* iDomoticz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				24108ED8280A333500BD4CAB /* iDomoticz.xcdatamodel */,
+			);
+			currentVersion = 24108ED8280A333500BD4CAB /* iDomoticz.xcdatamodel */;
+			path = iDomoticz.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 24108EC1280A333200BD4CAB /* Project object */;
+}
