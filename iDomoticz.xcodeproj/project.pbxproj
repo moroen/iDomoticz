@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24108ECD280A333200BD4CAB /* iDomoticzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ECC280A333200BD4CAB /* iDomoticzApp.swift */; };
-		24108ECF280A333200BD4CAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ECE280A333200BD4CAB /* ContentView.swift */; };
+		24108ECF280A333200BD4CAB /* ScenesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ECE280A333200BD4CAB /* ScenesView.swift */; };
 		24108ED1280A333500BD4CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24108ED0280A333500BD4CAB /* Assets.xcassets */; };
 		24108ED4280A333500BD4CAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24108ED3280A333500BD4CAB /* Preview Assets.xcassets */; };
 		24108ED6280A333500BD4CAB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ED5280A333500BD4CAB /* Persistence.swift */; };
@@ -16,6 +16,11 @@
 		24108EE3280A333500BD4CAB /* iDomoticzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108EE2280A333500BD4CAB /* iDomoticzTests.swift */; };
 		24108EED280A333500BD4CAB /* iDomoticzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108EEC280A333500BD4CAB /* iDomoticzUITests.swift */; };
 		24108EEF280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108EEE280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift */; };
+		2414C536282081190044F709 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C535282081190044F709 /* MainView.swift */; };
+		2414C538282081D80044F709 /* RoomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C537282081D80044F709 /* RoomsView.swift */; };
+		2414C53A282092700044F709 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C539282092700044F709 /* Rooms.swift */; };
+		2414C53D2820959F0044F709 /* DomoticzData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C53C2820959F0044F709 /* DomoticzData.swift */; };
+		241E496D280B6AE50018ED42 /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E496C280B6AE50018ED42 /* Scenes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 /* Begin PBXFileReference section */
 		24108EC9280A333200BD4CAB /* iDomoticz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDomoticz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24108ECC280A333200BD4CAB /* iDomoticzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticzApp.swift; sourceTree = "<group>"; };
-		24108ECE280A333200BD4CAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		24108ECE280A333200BD4CAB /* ScenesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesView.swift; sourceTree = "<group>"; };
 		24108ED0280A333500BD4CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24108ED3280A333500BD4CAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24108ED5280A333500BD4CAB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +53,11 @@
 		24108EE8280A333500BD4CAB /* iDomoticzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDomoticzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24108EEC280A333500BD4CAB /* iDomoticzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticzUITests.swift; sourceTree = "<group>"; };
 		24108EEE280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticzUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2414C535282081190044F709 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2414C537282081D80044F709 /* RoomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsView.swift; sourceTree = "<group>"; };
+		2414C539282092700044F709 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
+		2414C53C2820959F0044F709 /* DomoticzData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomoticzData.swift; sourceTree = "<group>"; };
+		241E496C280B6AE50018ED42 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +108,15 @@
 		24108ECB280A333200BD4CAB /* iDomoticz */ = {
 			isa = PBXGroup;
 			children = (
+				2414C53B282095690044F709 /* DomoticzData */,
 				24108ECC280A333200BD4CAB /* iDomoticzApp.swift */,
-				24108ECE280A333200BD4CAB /* ContentView.swift */,
+				24108ECE280A333200BD4CAB /* ScenesView.swift */,
 				24108ED0280A333500BD4CAB /* Assets.xcassets */,
 				24108ED5280A333500BD4CAB /* Persistence.swift */,
 				24108ED7280A333500BD4CAB /* iDomoticz.xcdatamodeld */,
 				24108ED2280A333500BD4CAB /* Preview Content */,
+				2414C535282081190044F709 /* MainView.swift */,
+				2414C537282081D80044F709 /* RoomsView.swift */,
 			);
 			path = iDomoticz;
 			sourceTree = "<group>";
@@ -131,6 +144,16 @@
 				24108EEE280A333500BD4CAB /* iDomoticzUITestsLaunchTests.swift */,
 			);
 			path = iDomoticzUITests;
+			sourceTree = "<group>";
+		};
+		2414C53B282095690044F709 /* DomoticzData */ = {
+			isa = PBXGroup;
+			children = (
+				2414C539282092700044F709 /* Rooms.swift */,
+				241E496C280B6AE50018ED42 /* Scenes.swift */,
+				2414C53C2820959F0044F709 /* DomoticzData.swift */,
+			);
+			path = DomoticzData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2414C536282081190044F709 /* MainView.swift in Sources */,
 				24108ED9280A333500BD4CAB /* iDomoticz.xcdatamodeld in Sources */,
+				2414C53D2820959F0044F709 /* DomoticzData.swift in Sources */,
 				24108ED6280A333500BD4CAB /* Persistence.swift in Sources */,
-				24108ECF280A333200BD4CAB /* ContentView.swift in Sources */,
+				241E496D280B6AE50018ED42 /* Scenes.swift in Sources */,
+				2414C538282081D80044F709 /* RoomsView.swift in Sources */,
+				24108ECF280A333200BD4CAB /* ScenesView.swift in Sources */,
+				2414C53A282092700044F709 /* Rooms.swift in Sources */,
 				24108ECD280A333200BD4CAB /* iDomoticzApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
