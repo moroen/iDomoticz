@@ -20,7 +20,12 @@
 		2414C538282081D80044F709 /* RoomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C537282081D80044F709 /* RoomsView.swift */; };
 		2414C53A282092700044F709 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C539282092700044F709 /* Rooms.swift */; };
 		2414C53D2820959F0044F709 /* DomoticzData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C53C2820959F0044F709 /* DomoticzData.swift */; };
+		2414C53F2821D0310044F709 /* Lights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C53E2821D0310044F709 /* Lights.swift */; };
+		2414C5412821E6F60044F709 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C5402821E6F60044F709 /* FavoritesView.swift */; };
+		2414C543282486480044F709 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2414C542282486480044F709 /* Settings.bundle */; };
 		241E496D280B6AE50018ED42 /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E496C280B6AE50018ED42 /* Scenes.swift */; };
+		24F875532829C0E100B82D4C /* LightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F875522829C0E100B82D4C /* LightsView.swift */; };
+		24F87555282AF3DD00B82D4C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F87554282AF3DD00B82D4C /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +62,12 @@
 		2414C537282081D80044F709 /* RoomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsView.swift; sourceTree = "<group>"; };
 		2414C539282092700044F709 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		2414C53C2820959F0044F709 /* DomoticzData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomoticzData.swift; sourceTree = "<group>"; };
+		2414C53E2821D0310044F709 /* Lights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lights.swift; sourceTree = "<group>"; };
+		2414C5402821E6F60044F709 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		2414C542282486480044F709 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		241E496C280B6AE50018ED42 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
+		24F875522829C0E100B82D4C /* LightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsView.swift; sourceTree = "<group>"; };
+		24F87554282AF3DD00B82D4C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,10 @@
 				24108ED2280A333500BD4CAB /* Preview Content */,
 				2414C535282081190044F709 /* MainView.swift */,
 				2414C537282081D80044F709 /* RoomsView.swift */,
+				2414C5402821E6F60044F709 /* FavoritesView.swift */,
+				24F875522829C0E100B82D4C /* LightsView.swift */,
+				2414C542282486480044F709 /* Settings.bundle */,
+				24F87554282AF3DD00B82D4C /* SettingsView.swift */,
 			);
 			path = iDomoticz;
 			sourceTree = "<group>";
@@ -152,6 +166,7 @@
 				2414C539282092700044F709 /* Rooms.swift */,
 				241E496C280B6AE50018ED42 /* Scenes.swift */,
 				2414C53C2820959F0044F709 /* DomoticzData.swift */,
+				2414C53E2821D0310044F709 /* Lights.swift */,
 			);
 			path = DomoticzData;
 			sourceTree = "<group>";
@@ -261,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24108ED4280A333500BD4CAB /* Preview Assets.xcassets in Resources */,
+				2414C543282486480044F709 /* Settings.bundle in Resources */,
 				24108ED1280A333500BD4CAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2414C5412821E6F60044F709 /* FavoritesView.swift in Sources */,
 				2414C536282081190044F709 /* MainView.swift in Sources */,
 				24108ED9280A333500BD4CAB /* iDomoticz.xcdatamodeld in Sources */,
 				2414C53D2820959F0044F709 /* DomoticzData.swift in Sources */,
@@ -293,8 +310,11 @@
 				241E496D280B6AE50018ED42 /* Scenes.swift in Sources */,
 				2414C538282081D80044F709 /* RoomsView.swift in Sources */,
 				24108ECF280A333200BD4CAB /* ScenesView.swift in Sources */,
+				24F875532829C0E100B82D4C /* LightsView.swift in Sources */,
+				2414C53F2821D0310044F709 /* Lights.swift in Sources */,
 				2414C53A282092700044F709 /* Rooms.swift in Sources */,
 				24108ECD280A333200BD4CAB /* iDomoticzApp.swift in Sources */,
+				24F87555282AF3DD00B82D4C /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
