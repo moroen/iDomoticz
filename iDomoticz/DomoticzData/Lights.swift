@@ -26,7 +26,7 @@ struct DomoticzLightDefinition: Codable, Identifiable {
     let name, idx, planID: String
     var status: String
     let switchType: String
-    let switchTypeCode: Int
+    let switchTypeCode, level: Int
     let favorite: Int
     
     var id = UUID()
@@ -38,6 +38,7 @@ struct DomoticzLightDefinition: Codable, Identifiable {
         case favorite = "Favorite"
         case switchType = "SwitchType"
         case switchTypeCode = "SwitchTypeVal"
+        case level="Level"
         case status = "Status"
         case idx
     }
@@ -50,6 +51,9 @@ class DomoticzLight: ObservableObject, Identifiable {
     
     init(definition: DomoticzLightDefinition) {
         self.info = definition
+        if self.info.switchTypeCode==7 && self.info.status != "Off"{
+            self.info.status = self.info.level > 0 ? "On" : "Off"
+        }
     }
     
     public func SetStatus(status: String) {
@@ -77,11 +81,12 @@ struct LightButton: View {
         }) {
             HStack {
                 StateImage(state: light.info.status )
-                VStack {
-                    Text(light.info.name)
-                    Text(light.info.idx)
-                }
-            }.frame(maxWidth: .infinity, alignment: .leading)
+                Text(light.info.name)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .modifier(FitToWidth(fraction: 1))
+                    
+                
+                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             
         }.simultaneousGesture(LongPressGesture(minimumDuration: 1)
             .onEnded { _ in
@@ -89,6 +94,7 @@ struct LightButton: View {
                 
             }
         )
+        
     }
     
     @ViewBuilder
@@ -102,3 +108,15 @@ struct LightButton: View {
     }
 }
 
+struct FitToWidth: ViewModifier {
+    var fraction: CGFloat = 1.0
+    func body(content: Content) -> some View {
+        GeometryReader { g in
+        content
+            .font(.system(size: 1000))
+            .minimumScaleFactor(0.005)
+            .lineLimit(1)
+            .frame(width: g.size.width*self.fraction)
+        }
+    }
+}

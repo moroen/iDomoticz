@@ -27,7 +27,7 @@ struct FavoritesView: View {
             Text("Scenes").font(.title)
             ScenesView(scenes: domoticzData.scenes.filter {$0.favorite==1})
             Text("Lights").font(.title)
-            LightsView(lights: domoticzData.lights.filter {$0.info.favorite==1}, header: {EmptyView()})
+            LightsView(lights: domoticzData.lights.filter {$0.info.favorite==1}, header: { EmptyView() })
         }
     }
     

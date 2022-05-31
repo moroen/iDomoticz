@@ -29,17 +29,20 @@ struct MainView: View {
     
     @StateObject var domoticzData = DomoticzData.shared
     
+    @State var selected = 0
+    
     var body: some View {
-        
-        TabView {
+
+        TabView (selection: $selected) {
+            
             FavoritesView(domoticzData: domoticzData)
                 .tabItem {
                     Label("Favorites", systemImage: "list.dash")
-                }
-            LightsView(lights: domoticzData.lights)
+                }.tag(0)
+            LightsView(lights: domoticzData.lights, header: { EmptyView() })
                 .tabItem {
                     Label("Lights", systemImage: "lightbulb.circle")
-                }
+                }.tag(1)
             
             ScenesView(scenes: domoticzData.scenes)
                 .tabItem {
@@ -52,12 +55,13 @@ struct MainView: View {
                 }
             SettingsView(domoticzData: domoticzData)
                 .tabItem {
-                    Label("", systemImage: "gear")
+                    Label("Settings", systemImage: "gear")
                 }
         }
         
     }
 }
+
 
 
 struct MainView_Previews: PreviewProvider {

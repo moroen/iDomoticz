@@ -24,6 +24,43 @@
 		2414C5412821E6F60044F709 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C5402821E6F60044F709 /* FavoritesView.swift */; };
 		2414C543282486480044F709 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2414C542282486480044F709 /* Settings.bundle */; };
 		241E496D280B6AE50018ED42 /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E496C280B6AE50018ED42 /* Scenes.swift */; };
+		2426E6B3283444E200C513AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2426E6B2283444E200C513AF /* Assets.xcassets */; };
+		2426E6B6283444E200C513AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2426E6B5283444E200C513AF /* Preview Assets.xcassets */; };
+		2426E6C1283444E200C513AF /* iDomoticz_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426E6C0283444E200C513AF /* iDomoticz_MacTests.swift */; };
+		2426E6CB283444E200C513AF /* iDomoticz_MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426E6CA283444E200C513AF /* iDomoticz_MacUITests.swift */; };
+		2426E6CD283444E200C513AF /* iDomoticz_MacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426E6CC283444E200C513AF /* iDomoticz_MacUITestsLaunchTests.swift */; };
+		2426E6D72834468F00C513AF /* iDomoticz_MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426E6AE283444E100C513AF /* iDomoticz_MacApp.swift */; };
+		2426E6D82834470E00C513AF /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C539282092700044F709 /* Rooms.swift */; };
+		2426E6D92834470E00C513AF /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E496C280B6AE50018ED42 /* Scenes.swift */; };
+		2426E6DA2834470E00C513AF /* DomoticzData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C53C2820959F0044F709 /* DomoticzData.swift */; };
+		2426E6DB2834470E00C513AF /* Lights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C53E2821D0310044F709 /* Lights.swift */; };
+		2426E6DC2834470E00C513AF /* ScenesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ECE280A333200BD4CAB /* ScenesView.swift */; };
+		2426E6DD2834470E00C513AF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C535282081190044F709 /* MainView.swift */; };
+		2426E6DE2834470E00C513AF /* RoomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C537282081D80044F709 /* RoomsView.swift */; };
+		2426E6DF2834470E00C513AF /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C5402821E6F60044F709 /* FavoritesView.swift */; };
+		2426E6E02834470E00C513AF /* LightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F875522829C0E100B82D4C /* LightsView.swift */; };
+		2426E6E12834470E00C513AF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F87554282AF3DD00B82D4C /* SettingsView.swift */; };
+		2426E6E9283447AA00C513AF /* iOSDomoticzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426E6E8283447AA00C513AF /* iOSDomoticzApp.swift */; };
+		2426E6ED283447AA00C513AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2426E6EC283447AA00C513AF /* Assets.xcassets */; };
+		2426E6F0283447AA00C513AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2426E6EF283447AA00C513AF /* Preview Assets.xcassets */; };
+		2426E6FA283447AA00C513AF /* iOSDomoticzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426E6F9283447AA00C513AF /* iOSDomoticzTests.swift */; };
+		2426E704283447AA00C513AF /* iOSDomoticzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426E703283447AA00C513AF /* iOSDomoticzUITests.swift */; };
+		2426E706283447AA00C513AF /* iOSDomoticzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426E705283447AA00C513AF /* iOSDomoticzUITestsLaunchTests.swift */; };
+		2426E710283448C300C513AF /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C539282092700044F709 /* Rooms.swift */; };
+		2426E711283448C300C513AF /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E496C280B6AE50018ED42 /* Scenes.swift */; };
+		2426E712283448C300C513AF /* DomoticzData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C53C2820959F0044F709 /* DomoticzData.swift */; };
+		2426E713283448C300C513AF /* Lights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C53E2821D0310044F709 /* Lights.swift */; };
+		2426E714283448C300C513AF /* ScenesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24108ECE280A333200BD4CAB /* ScenesView.swift */; };
+		2426E715283448C300C513AF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C535282081190044F709 /* MainView.swift */; };
+		2426E716283448C300C513AF /* RoomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C537282081D80044F709 /* RoomsView.swift */; };
+		2426E717283448C300C513AF /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414C5402821E6F60044F709 /* FavoritesView.swift */; };
+		2426E718283448C300C513AF /* LightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F875522829C0E100B82D4C /* LightsView.swift */; };
+		2426E71A283448C300C513AF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F87554282AF3DD00B82D4C /* SettingsView.swift */; };
+		2426E71B2834494D00C513AF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2414C542282486480044F709 /* Settings.bundle */; };
+		249DF5F3283E902900D52F6E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2414C542282486480044F709 /* Settings.bundle */; };
+		24AB9C892844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
+		24AB9C8A2844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
+		24AB9C8B2844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
 		24F875532829C0E100B82D4C /* LightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F875522829C0E100B82D4C /* LightsView.swift */; };
 		24F87555282AF3DD00B82D4C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F87554282AF3DD00B82D4C /* SettingsView.swift */; };
 /* End PBXBuildFile section */
@@ -43,10 +80,38 @@
 			remoteGlobalIDString = 24108EC8280A333200BD4CAB;
 			remoteInfo = iDomoticz;
 		};
+		2426E6BD283444E200C513AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24108EC1280A333200BD4CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2426E6AB283444E100C513AF;
+			remoteInfo = "iDomoticz-Mac";
+		};
+		2426E6C7283444E200C513AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24108EC1280A333200BD4CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2426E6AB283444E100C513AF;
+			remoteInfo = "iDomoticz-Mac";
+		};
+		2426E6F6283447AA00C513AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24108EC1280A333200BD4CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2426E6E5283447A900C513AF;
+			remoteInfo = iOSDomoticz;
+		};
+		2426E700283447AA00C513AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24108EC1280A333200BD4CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2426E6E5283447A900C513AF;
+			remoteInfo = iOSDomoticz;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24108EC9280A333200BD4CAB /* iDomoticz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDomoticz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24108EC9280A333200BD4CAB /* tvDomoticz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvDomoticz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24108ECC280A333200BD4CAB /* iDomoticzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticzApp.swift; sourceTree = "<group>"; };
 		24108ECE280A333200BD4CAB /* ScenesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesView.swift; sourceTree = "<group>"; };
 		24108ED0280A333500BD4CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +131,27 @@
 		2414C5402821E6F60044F709 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		2414C542282486480044F709 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		241E496C280B6AE50018ED42 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
+		2426E6AC283444E100C513AF /* macDomoticz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macDomoticz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2426E6AE283444E100C513AF /* iDomoticz_MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticz_MacApp.swift; sourceTree = "<group>"; };
+		2426E6B2283444E200C513AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2426E6B5283444E200C513AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2426E6B7283444E200C513AF /* iDomoticz_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iDomoticz_Mac.entitlements; sourceTree = "<group>"; };
+		2426E6BC283444E200C513AF /* iDomoticz-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iDomoticz-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2426E6C0283444E200C513AF /* iDomoticz_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticz_MacTests.swift; sourceTree = "<group>"; };
+		2426E6C6283444E200C513AF /* iDomoticz-MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iDomoticz-MacUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2426E6CA283444E200C513AF /* iDomoticz_MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticz_MacUITests.swift; sourceTree = "<group>"; };
+		2426E6CC283444E200C513AF /* iDomoticz_MacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDomoticz_MacUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2426E6E6283447A900C513AF /* iOSDomoticz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDomoticz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2426E6E8283447AA00C513AF /* iOSDomoticzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDomoticzApp.swift; sourceTree = "<group>"; };
+		2426E6EA283447AA00C513AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2426E6EC283447AA00C513AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2426E6EF283447AA00C513AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2426E6F5283447AA00C513AF /* iOSDomoticzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDomoticzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2426E6F9283447AA00C513AF /* iOSDomoticzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDomoticzTests.swift; sourceTree = "<group>"; };
+		2426E6FF283447AA00C513AF /* iOSDomoticzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDomoticzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2426E703283447AA00C513AF /* iOSDomoticzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDomoticzUITests.swift; sourceTree = "<group>"; };
+		2426E705283447AA00C513AF /* iOSDomoticzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDomoticzUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		24AB9C882844E5A40043FDEA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		24F875522829C0E100B82D4C /* LightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsView.swift; sourceTree = "<group>"; };
 		24F87554282AF3DD00B82D4C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,15 +178,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2426E6A9283444E100C513AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6B9283444E200C513AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6C3283444E200C513AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6E3283447A900C513AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6F2283447AA00C513AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6FC283447AA00C513AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		24108EC0280A333200BD4CAB = {
 			isa = PBXGroup;
 			children = (
+				24A4F40A28353A3A00E557E2 /* Tests */,
+				2426E6AD283444E100C513AF /* macDomoticz */,
+				2426E6E7283447AA00C513AF /* iOSDomoticz */,
+				24A4F409283533F600E557E2 /* tvDomoticz */,
 				24108ECB280A333200BD4CAB /* iDomoticz */,
-				24108EE1280A333500BD4CAB /* iDomoticzTests */,
-				24108EEB280A333500BD4CAB /* iDomoticzUITests */,
 				24108ECA280A333200BD4CAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,9 +238,15 @@
 		24108ECA280A333200BD4CAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24108EC9280A333200BD4CAB /* iDomoticz.app */,
+				24108EC9280A333200BD4CAB /* tvDomoticz.app */,
 				24108EDE280A333500BD4CAB /* iDomoticzTests.xctest */,
 				24108EE8280A333500BD4CAB /* iDomoticzUITests.xctest */,
+				2426E6AC283444E100C513AF /* macDomoticz.app */,
+				2426E6BC283444E200C513AF /* iDomoticz-MacTests.xctest */,
+				2426E6C6283444E200C513AF /* iDomoticz-MacUITests.xctest */,
+				2426E6E6283447A900C513AF /* iOSDomoticz.app */,
+				2426E6F5283447AA00C513AF /* iOSDomoticzTests.xctest */,
+				2426E6FF283447AA00C513AF /* iOSDomoticzUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,9 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				2414C53B282095690044F709 /* DomoticzData */,
-				24108ECC280A333200BD4CAB /* iDomoticzApp.swift */,
 				24108ECE280A333200BD4CAB /* ScenesView.swift */,
-				24108ED0280A333500BD4CAB /* Assets.xcassets */,
 				24108ED5280A333500BD4CAB /* Persistence.swift */,
 				24108ED7280A333500BD4CAB /* iDomoticz.xcdatamodeld */,
 				24108ED2280A333500BD4CAB /* Preview Content */,
@@ -131,6 +265,7 @@
 				24F875522829C0E100B82D4C /* LightsView.swift */,
 				2414C542282486480044F709 /* Settings.bundle */,
 				24F87554282AF3DD00B82D4C /* SettingsView.swift */,
+				24AB9C882844E5A40043FDEA /* TestView.swift */,
 			);
 			path = iDomoticz;
 			sourceTree = "<group>";
@@ -171,12 +306,106 @@
 			path = DomoticzData;
 			sourceTree = "<group>";
 		};
+		2426E6AD283444E100C513AF /* macDomoticz */ = {
+			isa = PBXGroup;
+			children = (
+				2426E6AE283444E100C513AF /* iDomoticz_MacApp.swift */,
+				2426E6B2283444E200C513AF /* Assets.xcassets */,
+				2426E6B7283444E200C513AF /* iDomoticz_Mac.entitlements */,
+				2426E6B4283444E200C513AF /* Preview Content */,
+			);
+			path = macDomoticz;
+			sourceTree = "<group>";
+		};
+		2426E6B4283444E200C513AF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2426E6B5283444E200C513AF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2426E6BF283444E200C513AF /* iDomoticz-MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				2426E6C0283444E200C513AF /* iDomoticz_MacTests.swift */,
+			);
+			path = "iDomoticz-MacTests";
+			sourceTree = "<group>";
+		};
+		2426E6C9283444E200C513AF /* iDomoticz-MacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2426E6CA283444E200C513AF /* iDomoticz_MacUITests.swift */,
+				2426E6CC283444E200C513AF /* iDomoticz_MacUITestsLaunchTests.swift */,
+			);
+			path = "iDomoticz-MacUITests";
+			sourceTree = "<group>";
+		};
+		2426E6E7283447AA00C513AF /* iOSDomoticz */ = {
+			isa = PBXGroup;
+			children = (
+				2426E6E8283447AA00C513AF /* iOSDomoticzApp.swift */,
+				2426E6EA283447AA00C513AF /* ContentView.swift */,
+				2426E6EC283447AA00C513AF /* Assets.xcassets */,
+				2426E6EE283447AA00C513AF /* Preview Content */,
+			);
+			path = iOSDomoticz;
+			sourceTree = "<group>";
+		};
+		2426E6EE283447AA00C513AF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2426E6EF283447AA00C513AF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2426E6F8283447AA00C513AF /* iOSDomoticzTests */ = {
+			isa = PBXGroup;
+			children = (
+				2426E6F9283447AA00C513AF /* iOSDomoticzTests.swift */,
+			);
+			path = iOSDomoticzTests;
+			sourceTree = "<group>";
+		};
+		2426E702283447AA00C513AF /* iOSDomoticzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2426E703283447AA00C513AF /* iOSDomoticzUITests.swift */,
+				2426E705283447AA00C513AF /* iOSDomoticzUITestsLaunchTests.swift */,
+			);
+			path = iOSDomoticzUITests;
+			sourceTree = "<group>";
+		};
+		24A4F409283533F600E557E2 /* tvDomoticz */ = {
+			isa = PBXGroup;
+			children = (
+				24108ED0280A333500BD4CAB /* Assets.xcassets */,
+				24108ECC280A333200BD4CAB /* iDomoticzApp.swift */,
+			);
+			path = tvDomoticz;
+			sourceTree = "<group>";
+		};
+		24A4F40A28353A3A00E557E2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				24108EE1280A333500BD4CAB /* iDomoticzTests */,
+				24108EEB280A333500BD4CAB /* iDomoticzUITests */,
+				2426E6BF283444E200C513AF /* iDomoticz-MacTests */,
+				2426E6C9283444E200C513AF /* iDomoticz-MacUITests */,
+				2426E6F8283447AA00C513AF /* iOSDomoticzTests */,
+				2426E702283447AA00C513AF /* iOSDomoticzUITests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		24108EC8280A333200BD4CAB /* iDomoticz */ = {
+		24108EC8280A333200BD4CAB /* tvDomoticz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24108EF2280A333500BD4CAB /* Build configuration list for PBXNativeTarget "iDomoticz" */;
+			buildConfigurationList = 24108EF2280A333500BD4CAB /* Build configuration list for PBXNativeTarget "tvDomoticz" */;
 			buildPhases = (
 				24108EC5280A333200BD4CAB /* Sources */,
 				24108EC6280A333200BD4CAB /* Frameworks */,
@@ -186,9 +415,9 @@
 			);
 			dependencies = (
 			);
-			name = iDomoticz;
+			name = tvDomoticz;
 			productName = iDomoticz;
-			productReference = 24108EC9280A333200BD4CAB /* iDomoticz.app */;
+			productReference = 24108EC9280A333200BD4CAB /* tvDomoticz.app */;
 			productType = "com.apple.product-type.application";
 		};
 		24108EDD280A333500BD4CAB /* iDomoticzTests */ = {
@@ -227,6 +456,112 @@
 			productReference = 24108EE8280A333500BD4CAB /* iDomoticzUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2426E6AB283444E100C513AF /* macDomoticz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2426E6CE283444E200C513AF /* Build configuration list for PBXNativeTarget "macDomoticz" */;
+			buildPhases = (
+				2426E6A8283444E100C513AF /* Sources */,
+				2426E6A9283444E100C513AF /* Frameworks */,
+				2426E6AA283444E100C513AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macDomoticz;
+			productName = "iDomoticz-Mac";
+			productReference = 2426E6AC283444E100C513AF /* macDomoticz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2426E6BB283444E200C513AF /* iDomoticz-MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2426E6D1283444E200C513AF /* Build configuration list for PBXNativeTarget "iDomoticz-MacTests" */;
+			buildPhases = (
+				2426E6B8283444E200C513AF /* Sources */,
+				2426E6B9283444E200C513AF /* Frameworks */,
+				2426E6BA283444E200C513AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2426E6BE283444E200C513AF /* PBXTargetDependency */,
+			);
+			name = "iDomoticz-MacTests";
+			productName = "iDomoticz-MacTests";
+			productReference = 2426E6BC283444E200C513AF /* iDomoticz-MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2426E6C5283444E200C513AF /* iDomoticz-MacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2426E6D4283444E200C513AF /* Build configuration list for PBXNativeTarget "iDomoticz-MacUITests" */;
+			buildPhases = (
+				2426E6C2283444E200C513AF /* Sources */,
+				2426E6C3283444E200C513AF /* Frameworks */,
+				2426E6C4283444E200C513AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2426E6C8283444E200C513AF /* PBXTargetDependency */,
+			);
+			name = "iDomoticz-MacUITests";
+			productName = "iDomoticz-MacUITests";
+			productReference = 2426E6C6283444E200C513AF /* iDomoticz-MacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		2426E6E5283447A900C513AF /* iOSDomoticz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2426E707283447AA00C513AF /* Build configuration list for PBXNativeTarget "iOSDomoticz" */;
+			buildPhases = (
+				2426E6E2283447A900C513AF /* Sources */,
+				2426E6E3283447A900C513AF /* Frameworks */,
+				2426E6E4283447A900C513AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSDomoticz;
+			productName = iOSDomoticz;
+			productReference = 2426E6E6283447A900C513AF /* iOSDomoticz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2426E6F4283447AA00C513AF /* iOSDomoticzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2426E70A283447AA00C513AF /* Build configuration list for PBXNativeTarget "iOSDomoticzTests" */;
+			buildPhases = (
+				2426E6F1283447AA00C513AF /* Sources */,
+				2426E6F2283447AA00C513AF /* Frameworks */,
+				2426E6F3283447AA00C513AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2426E6F7283447AA00C513AF /* PBXTargetDependency */,
+			);
+			name = iOSDomoticzTests;
+			productName = iOSDomoticzTests;
+			productReference = 2426E6F5283447AA00C513AF /* iOSDomoticzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2426E6FE283447AA00C513AF /* iOSDomoticzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2426E70D283447AA00C513AF /* Build configuration list for PBXNativeTarget "iOSDomoticzUITests" */;
+			buildPhases = (
+				2426E6FB283447AA00C513AF /* Sources */,
+				2426E6FC283447AA00C513AF /* Frameworks */,
+				2426E6FD283447AA00C513AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2426E701283447AA00C513AF /* PBXTargetDependency */,
+			);
+			name = iOSDomoticzUITests;
+			productName = iOSDomoticzUITests;
+			productReference = 2426E6FF283447AA00C513AF /* iOSDomoticzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,6 +583,28 @@
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = 24108EC8280A333200BD4CAB;
 					};
+					2426E6AB283444E100C513AF = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					2426E6BB283444E200C513AF = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 2426E6AB283444E100C513AF;
+					};
+					2426E6C5283444E200C513AF = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 2426E6AB283444E100C513AF;
+					};
+					2426E6E5283447A900C513AF = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					2426E6F4283447AA00C513AF = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 2426E6E5283447A900C513AF;
+					};
+					2426E6FE283447AA00C513AF = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 2426E6E5283447A900C513AF;
+					};
 				};
 			};
 			buildConfigurationList = 24108EC4280A333200BD4CAB /* Build configuration list for PBXProject "iDomoticz" */;
@@ -263,9 +620,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24108EC8280A333200BD4CAB /* iDomoticz */,
+				24108EC8280A333200BD4CAB /* tvDomoticz */,
 				24108EDD280A333500BD4CAB /* iDomoticzTests */,
 				24108EE7280A333500BD4CAB /* iDomoticzUITests */,
+				2426E6AB283444E100C513AF /* macDomoticz */,
+				2426E6BB283444E200C513AF /* iDomoticz-MacTests */,
+				2426E6C5283444E200C513AF /* iDomoticz-MacUITests */,
+				2426E6E5283447A900C513AF /* iOSDomoticz */,
+				2426E6F4283447AA00C513AF /* iOSDomoticzTests */,
+				2426E6FE283447AA00C513AF /* iOSDomoticzUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +658,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2426E6AA283444E100C513AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2426E6B6283444E200C513AF /* Preview Assets.xcassets in Resources */,
+				2426E6B3283444E200C513AF /* Assets.xcassets in Resources */,
+				249DF5F3283E902900D52F6E /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6BA283444E200C513AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6C4283444E200C513AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6E4283447A900C513AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2426E71B2834494D00C513AF /* Settings.bundle in Resources */,
+				2426E6F0283447AA00C513AF /* Preview Assets.xcassets in Resources */,
+				2426E6ED283447AA00C513AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6F3283447AA00C513AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6FD283447AA00C513AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -302,6 +713,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AB9C892844E5A40043FDEA /* TestView.swift in Sources */,
 				2414C5412821E6F60044F709 /* FavoritesView.swift in Sources */,
 				2414C536282081190044F709 /* MainView.swift in Sources */,
 				24108ED9280A333500BD4CAB /* iDomoticz.xcdatamodeld in Sources */,
@@ -335,18 +747,110 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2426E6A8283444E100C513AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24AB9C8A2844E5A40043FDEA /* TestView.swift in Sources */,
+				2426E6D82834470E00C513AF /* Rooms.swift in Sources */,
+				2426E6D92834470E00C513AF /* Scenes.swift in Sources */,
+				2426E6DA2834470E00C513AF /* DomoticzData.swift in Sources */,
+				2426E6DB2834470E00C513AF /* Lights.swift in Sources */,
+				2426E6DC2834470E00C513AF /* ScenesView.swift in Sources */,
+				2426E6DD2834470E00C513AF /* MainView.swift in Sources */,
+				2426E6DE2834470E00C513AF /* RoomsView.swift in Sources */,
+				2426E6DF2834470E00C513AF /* FavoritesView.swift in Sources */,
+				2426E6E02834470E00C513AF /* LightsView.swift in Sources */,
+				2426E6E12834470E00C513AF /* SettingsView.swift in Sources */,
+				2426E6D72834468F00C513AF /* iDomoticz_MacApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6B8283444E200C513AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2426E6C1283444E200C513AF /* iDomoticz_MacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6C2283444E200C513AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2426E6CB283444E200C513AF /* iDomoticz_MacUITests.swift in Sources */,
+				2426E6CD283444E200C513AF /* iDomoticz_MacUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6E2283447A900C513AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24AB9C8B2844E5A40043FDEA /* TestView.swift in Sources */,
+				2426E710283448C300C513AF /* Rooms.swift in Sources */,
+				2426E711283448C300C513AF /* Scenes.swift in Sources */,
+				2426E712283448C300C513AF /* DomoticzData.swift in Sources */,
+				2426E713283448C300C513AF /* Lights.swift in Sources */,
+				2426E714283448C300C513AF /* ScenesView.swift in Sources */,
+				2426E715283448C300C513AF /* MainView.swift in Sources */,
+				2426E716283448C300C513AF /* RoomsView.swift in Sources */,
+				2426E717283448C300C513AF /* FavoritesView.swift in Sources */,
+				2426E718283448C300C513AF /* LightsView.swift in Sources */,
+				2426E71A283448C300C513AF /* SettingsView.swift in Sources */,
+				2426E6E9283447AA00C513AF /* iOSDomoticzApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6F1283447AA00C513AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2426E6FA283447AA00C513AF /* iOSDomoticzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2426E6FB283447AA00C513AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2426E704283447AA00C513AF /* iOSDomoticzUITests.swift in Sources */,
+				2426E706283447AA00C513AF /* iOSDomoticzUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		24108EE0280A333500BD4CAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24108EC8280A333200BD4CAB /* iDomoticz */;
+			target = 24108EC8280A333200BD4CAB /* tvDomoticz */;
 			targetProxy = 24108EDF280A333500BD4CAB /* PBXContainerItemProxy */;
 		};
 		24108EEA280A333500BD4CAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24108EC8280A333200BD4CAB /* iDomoticz */;
+			target = 24108EC8280A333200BD4CAB /* tvDomoticz */;
 			targetProxy = 24108EE9280A333500BD4CAB /* PBXContainerItemProxy */;
+		};
+		2426E6BE283444E200C513AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2426E6AB283444E100C513AF /* macDomoticz */;
+			targetProxy = 2426E6BD283444E200C513AF /* PBXContainerItemProxy */;
+		};
+		2426E6C8283444E200C513AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2426E6AB283444E100C513AF /* macDomoticz */;
+			targetProxy = 2426E6C7283444E200C513AF /* PBXContainerItemProxy */;
+		};
+		2426E6F7283447AA00C513AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2426E6E5283447A900C513AF /* iOSDomoticz */;
+			targetProxy = 2426E6F6283447AA00C513AF /* PBXContainerItemProxy */;
+		};
+		2426E701283447AA00C513AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2426E6E5283447A900C513AF /* iOSDomoticz */;
+			targetProxy = 2426E700283447AA00C513AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -593,6 +1097,284 @@
 			};
 			name = Release;
 		};
+		2426E6CF283444E200C513AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macDomoticz/iDomoticz_Mac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ncd.iDomoticz-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2426E6D0283444E200C513AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macDomoticz/iDomoticz_Mac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ncd.iDomoticz-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2426E6D2283444E200C513AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ncd.iDomoticz-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDomoticz-Mac.app/Contents/MacOS/iDomoticz-Mac";
+			};
+			name = Debug;
+		};
+		2426E6D3283444E200C513AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ncd.iDomoticz-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iDomoticz-Mac.app/Contents/MacOS/iDomoticz-Mac";
+			};
+			name = Release;
+		};
+		2426E6D5283444E200C513AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ncd.iDomoticz-MacUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "iDomoticz-Mac";
+			};
+			name = Debug;
+		};
+		2426E6D6283444E200C513AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ncd.iDomoticz-MacUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "iDomoticz-Mac";
+			};
+			name = Release;
+		};
+		2426E708283447AA00C513AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iOSDomoticz/Preview Content\"";
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iOSDomoticz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2426E709283447AA00C513AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iOSDomoticz/Preview Content\"";
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iOSDomoticz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2426E70B283447AA00C513AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iOSDomoticzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSDomoticz.app/iOSDomoticz";
+			};
+			name = Debug;
+		};
+		2426E70C283447AA00C513AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iOSDomoticzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSDomoticz.app/iOSDomoticz";
+			};
+			name = Release;
+		};
+		2426E70E283447AA00C513AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iOSDomoticzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOSDomoticz;
+			};
+			name = Debug;
+		};
+		2426E70F283447AA00C513AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25299AR4XY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ncd.iOSDomoticzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOSDomoticz;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -605,7 +1387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24108EF2280A333500BD4CAB /* Build configuration list for PBXNativeTarget "iDomoticz" */ = {
+		24108EF2280A333500BD4CAB /* Build configuration list for PBXNativeTarget "tvDomoticz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24108EF3280A333500BD4CAB /* Debug */,
@@ -628,6 +1410,60 @@
 			buildConfigurations = (
 				24108EF9280A333500BD4CAB /* Debug */,
 				24108EFA280A333500BD4CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2426E6CE283444E200C513AF /* Build configuration list for PBXNativeTarget "macDomoticz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2426E6CF283444E200C513AF /* Debug */,
+				2426E6D0283444E200C513AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2426E6D1283444E200C513AF /* Build configuration list for PBXNativeTarget "iDomoticz-MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2426E6D2283444E200C513AF /* Debug */,
+				2426E6D3283444E200C513AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2426E6D4283444E200C513AF /* Build configuration list for PBXNativeTarget "iDomoticz-MacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2426E6D5283444E200C513AF /* Debug */,
+				2426E6D6283444E200C513AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2426E707283447AA00C513AF /* Build configuration list for PBXNativeTarget "iOSDomoticz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2426E708283447AA00C513AF /* Debug */,
+				2426E709283447AA00C513AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2426E70A283447AA00C513AF /* Build configuration list for PBXNativeTarget "iOSDomoticzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2426E70B283447AA00C513AF /* Debug */,
+				2426E70C283447AA00C513AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2426E70D283447AA00C513AF /* Build configuration list for PBXNativeTarget "iOSDomoticzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2426E70E283447AA00C513AF /* Debug */,
+				2426E70F283447AA00C513AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

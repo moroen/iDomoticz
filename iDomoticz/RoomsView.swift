@@ -14,25 +14,33 @@ struct RoomsView: View {
     
     @State private var maxWidth: CGFloat = .zero
     
-    private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    
+    // private var gridItemLayout: [GridItem]
     
     public init(domoticzData: DomoticzData) {
         self.domoticzData = domoticzData
     }
     
+#if os(tvOS)
+#else
+#endif
+    
     var body: some View {
         NavigationView {
+#if os(tvOS)
             ScrollView {
-                LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                    ForEach(domoticzData.rooms) { room in
-                        NavigationLink(destination: LightsView(lights: domoticzData.lights.filter {$0.info.planID == room.idx}, header: { Text(room.name).font(.title)})) {
-                            Text(room.name).frame(maxWidth: .infinity, alignment: .leading)
-                        }
-                    }
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
+                    RoomsList(domoticzData: domoticzData)
                 }
             }
+#else
+            List {
+                RoomsList(domoticzData: domoticzData)
+            }
+#endif
         }
     }
+    
     
     private func rectReader(_ binding: Binding<CGFloat>) -> some View {
         return GeometryReader { gp -> Color in
@@ -42,6 +50,20 @@ struct RoomsView: View {
             return Color.clear
         }
     }
+}
+
+
+struct RoomsList: View {
+    @ObservedObject var domoticzData: DomoticzData
+    
+    var body: some View {
+        ForEach(domoticzData.rooms) { room in
+            NavigationLink(destination: LightsView(lights: domoticzData.lights.filter {$0.info.planID == room.idx}, header: { Text(room.name) })) {
+                Text(room.name)
+                    .frame(maxWidth: .infinity)
+            }
+    }
+}
 }
 
 /*

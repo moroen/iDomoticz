@@ -12,7 +12,7 @@ struct iDomoticzApp: App {
     let persistenceController = PersistenceController.shared
     
     init() {
-        UserDefaults.standard.register(defaults: [String:AnyObject]())
+        // UserDefaults.standard.register(defaults: [String:AnyObject]())
         // let test = UserDefaults.standard.string(forKey: "server_host")
         // print(test)
     }

@@ -34,18 +34,41 @@ class DomoticzData: ObservableObject {
     @Published var lights = [DomoticzLight]()
     
     static let shared = DomoticzData()
-    
-    public var host: String
-    
+ 
     private init() {
-        let _host = UserDefaults.standard.string(forKey: "server_host")
-        let _port = UserDefaults.standard.string(forKey: "server_port")
-        self.host = "http://\(_host ?? "localhost"):\(_port ?? "8080")"
         loadDataFromUrl()
+    }
+ 
+    private var proto: String = "http"
+    
+    public var host: String {
+        get {
+            return UserDefaults.standard.string(forKey: "server_host") ?? "127.0.0.1"
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "server_host")
+        }
+    }
+
+    public var port: Int {
+        get {
+            let _port = UserDefaults.standard.integer(forKey: "server_port")
+            return _port != 0 ? _port : 8080
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "server_port")
+        }
+    }
+    
+    private var server: String {
+        get {
+            return "\(proto)://\(host):\(port)"
+        }
     }
     
     public func DoJsonCommand(cmd: String) {
-        guard let url = URL(string: "\(host)/json.htm?\(cmd)")
+        guard let url = URL(string: "\(server)/json.htm?\(cmd)")
         else {
             print("Unable to set URLs")
             return
@@ -61,11 +84,11 @@ class DomoticzData: ObservableObject {
     }
     
     func loadDataFromUrl() {
-        print("Loading data")
-        
-        guard let scenesurl = URL(string: "\(host)/json.htm?type=scenes"),
-              let roomsURL = URL(string: "\(host)/json.htm?type=plans&order=name&used=true"),
-              let lightsURL = URL(string: "\(host)/json.htm?type=devices&filter=light&used=true")
+        print("Loading data from \(server)/")
+                
+        guard let scenesurl = URL(string: "\(server)/json.htm?type=scenes"),
+              let roomsURL = URL(string: "\(server)/json.htm?type=plans&order=name&used=true"),
+              let lightsURL = URL(string: "\(server)/json.htm?type=devices&filter=light&used=true")
                 
         else {
             print("Unable to set URLs")
@@ -141,7 +164,7 @@ class DomoticzData: ObservableObject {
             }
             */
             
-            print(scenesurl)
+            
             
             guard let data = data
             else {

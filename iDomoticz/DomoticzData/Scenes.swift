@@ -57,7 +57,7 @@ struct DomoticzScenes: Codable {
         case result
         case status
         case title
-
+        
     }
 }
 
@@ -105,8 +105,7 @@ struct SceneButton: View {
             HStack {
                 Image(systemName: "theatermasks")
                 Text(scene.name)
-            }.frame(maxWidth: .infinity, alignment: .leading)
-            
+            } .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         }
     }
     
@@ -119,6 +118,7 @@ struct SceneButton: View {
         }
     }
 }
+
 
 func activateScene(sceneid: String) {
     guard let url = URL(string: "http://zwave.local:8080/json.htm?type=command&param=switchscene&idx=\(sceneid)&switchcmd=On")
