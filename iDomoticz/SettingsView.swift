@@ -29,15 +29,23 @@ struct SettingsView: View {
     
     var body: some View {
         
-        Form {
-     
-            
-            Section(header: Text("Server")) {
-                TextField("Host", text: $ip)
-                TextField("Port", value: $port, formatter: NumberFormatter()).focused($focusedField, equals: FocusedField.port)
+        VStack {
+            Form {
+         
+                
+                Section(header: Text("Server")) {
+                    TextField("Host", text: $ip)
+                    TextField("Port", value: $port, formatter: NumberFormatter()).focused($focusedField, equals: FocusedField.port)
+                }
+                
+                Section() {
+                
+                }
+            }.onSubmit {
+                domoticzData.host=ip
+                domoticzData.port=port
             }
             
-            Section() {
             Button(action: {
                 domoticzData.host=ip
                 domoticzData.port=port
@@ -45,10 +53,6 @@ struct SettingsView: View {
             }) {
                 Text("Update")
             }
-            }
-        }.onSubmit {
-            domoticzData.host=ip
-            domoticzData.port=port
         }
     }
 }

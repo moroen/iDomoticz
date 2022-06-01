@@ -80,13 +80,23 @@ struct LightButton: View {
             light.ToggleStatus()            
         }) {
             HStack {
-                StateImage(state: light.info.status )
-                Text(light.info.name)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .modifier(FitToWidth(fraction: 1))
-                    
-                
+                StateImageBuilder(state: light.info.status )
+                VStack {
+                    Text(light.info.name)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        // .modifier(FitToWidth(fraction: 1))
+                    /*
+                    HStack {
+                        Text(light.info.switchType)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text(light.info.switchTypeCode.description)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        //
+                    }
+                     */
+                }.modifier(FitToWidth(fraction: 1))
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                
             
         }.simultaneousGesture(LongPressGesture(minimumDuration: 1)
             .onEnded { _ in
@@ -96,27 +106,40 @@ struct LightButton: View {
         )
         
     }
-    
-    @ViewBuilder
-    private func StateImage(state: String) -> some View {
-        
-        if state=="On" {
-            Image(systemName: "lightbulb.fill").foregroundColor(Color(.systemYellow))
-        } else {
-            Image(systemName: "lightbulb")
-        }
-    }
 }
 
-struct FitToWidth: ViewModifier {
-    var fraction: CGFloat = 1.0
-    func body(content: Content) -> some View {
-        GeometryReader { g in
-        content
-            .font(.system(size: 1000))
-            .minimumScaleFactor(0.005)
-            .lineLimit(1)
-            .frame(width: g.size.width*self.fraction)
+struct BlindsButton: View {
+    @ObservedObject var light: DomoticzLight
+    
+    var body: some View {
+        
+        Button(action: {
+            // light.ToggleStatus()
+        }) {
+            HStack {
+                Image("roller-shades")
+                VStack {
+                    Text(light.info.name)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        // .modifier(FitToWidth(fraction: 1))
+                    HStack {
+                        // Text(light.info.switchType).frame(maxWidth: .infinity, alignment: .leading)
+                 
+                        //
+                    }
+                }.modifier(FitToWidth(fraction: 1))
+                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                
+            
         }
+        /*
+        .simultaneousGesture(LongPressGesture(minimumDuration: 1)
+            .onEnded { _ in
+                print("Loooong")
+                
+            }
+        )
+         */
+        
     }
 }

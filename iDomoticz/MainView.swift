@@ -29,7 +29,7 @@ struct MainView: View {
     
     @StateObject var domoticzData = DomoticzData.shared
     
-    @State var selected = 0
+    @State var selected = 1
     
     var body: some View {
 
@@ -39,24 +39,25 @@ struct MainView: View {
                 .tabItem {
                     Label("Favorites", systemImage: "list.dash")
                 }.tag(0)
+            RoomsView(domoticzData: domoticzData)
+                .tabItem {
+                    Label("Rooms", systemImage: "house")
+                }.tag(1)
+            
             LightsView(lights: domoticzData.lights, header: { EmptyView() })
                 .tabItem {
                     Label("Lights", systemImage: "lightbulb.circle")
-                }.tag(1)
+                }.tag(2)
             
             ScenesView(scenes: domoticzData.scenes)
                 .tabItem {
                     Label("Scenes", systemImage: "theatermasks")
-                }
+                }.tag(3)
             
-            RoomsView(domoticzData: domoticzData)
-                .tabItem {
-                    Label("Rooms", systemImage: "house")
-                }
             SettingsView(domoticzData: domoticzData)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
-                }
+                }.tag(4)
         }
         
     }

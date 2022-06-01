@@ -61,6 +61,12 @@
 		24AB9C892844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
 		24AB9C8A2844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
 		24AB9C8B2844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
+		24AB9C8D284789A10043FDEA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C8C284789A10043FDEA /* Common.swift */; };
+		24AB9C8E284789A10043FDEA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C8C284789A10043FDEA /* Common.swift */; };
+		24AB9C8F284789A10043FDEA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C8C284789A10043FDEA /* Common.swift */; };
+		24AB9C91284798860043FDEA /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB9C90284798860043FDEA /* Common.xcassets */; };
+		24AB9C92284798860043FDEA /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB9C90284798860043FDEA /* Common.xcassets */; };
+		24AB9C93284798860043FDEA /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB9C90284798860043FDEA /* Common.xcassets */; };
 		24F875532829C0E100B82D4C /* LightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F875522829C0E100B82D4C /* LightsView.swift */; };
 		24F87555282AF3DD00B82D4C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F87554282AF3DD00B82D4C /* SettingsView.swift */; };
 /* End PBXBuildFile section */
@@ -152,6 +158,8 @@
 		2426E703283447AA00C513AF /* iOSDomoticzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDomoticzUITests.swift; sourceTree = "<group>"; };
 		2426E705283447AA00C513AF /* iOSDomoticzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDomoticzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		24AB9C882844E5A40043FDEA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		24AB9C8C284789A10043FDEA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		24AB9C90284798860043FDEA /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Common.xcassets; sourceTree = "<group>"; };
 		24F875522829C0E100B82D4C /* LightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsView.swift; sourceTree = "<group>"; };
 		24F87554282AF3DD00B82D4C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,6 +274,8 @@
 				2414C542282486480044F709 /* Settings.bundle */,
 				24F87554282AF3DD00B82D4C /* SettingsView.swift */,
 				24AB9C882844E5A40043FDEA /* TestView.swift */,
+				24AB9C8C284789A10043FDEA /* Common.swift */,
+				24AB9C90284798860043FDEA /* Common.xcassets */,
 			);
 			path = iDomoticz;
 			sourceTree = "<group>";
@@ -638,6 +648,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AB9C91284798860043FDEA /* Common.xcassets in Resources */,
 				24108ED4280A333500BD4CAB /* Preview Assets.xcassets in Resources */,
 				2414C543282486480044F709 /* Settings.bundle in Resources */,
 				24108ED1280A333500BD4CAB /* Assets.xcassets in Resources */,
@@ -662,6 +673,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AB9C92284798860043FDEA /* Common.xcassets in Resources */,
 				2426E6B6283444E200C513AF /* Preview Assets.xcassets in Resources */,
 				2426E6B3283444E200C513AF /* Assets.xcassets in Resources */,
 				249DF5F3283E902900D52F6E /* Settings.bundle in Resources */,
@@ -686,6 +698,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AB9C93284798860043FDEA /* Common.xcassets in Resources */,
 				2426E71B2834494D00C513AF /* Settings.bundle in Resources */,
 				2426E6F0283447AA00C513AF /* Preview Assets.xcassets in Resources */,
 				2426E6ED283447AA00C513AF /* Assets.xcassets in Resources */,
@@ -726,6 +739,7 @@
 				2414C53F2821D0310044F709 /* Lights.swift in Sources */,
 				2414C53A282092700044F709 /* Rooms.swift in Sources */,
 				24108ECD280A333200BD4CAB /* iDomoticzApp.swift in Sources */,
+				24AB9C8D284789A10043FDEA /* Common.swift in Sources */,
 				24F87555282AF3DD00B82D4C /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +767,7 @@
 			files = (
 				24AB9C8A2844E5A40043FDEA /* TestView.swift in Sources */,
 				2426E6D82834470E00C513AF /* Rooms.swift in Sources */,
+				24AB9C8E284789A10043FDEA /* Common.swift in Sources */,
 				2426E6D92834470E00C513AF /* Scenes.swift in Sources */,
 				2426E6DA2834470E00C513AF /* DomoticzData.swift in Sources */,
 				2426E6DB2834470E00C513AF /* Lights.swift in Sources */,
@@ -789,6 +804,7 @@
 			files = (
 				24AB9C8B2844E5A40043FDEA /* TestView.swift in Sources */,
 				2426E710283448C300C513AF /* Rooms.swift in Sources */,
+				24AB9C8F284789A10043FDEA /* Common.swift in Sources */,
 				2426E711283448C300C513AF /* Scenes.swift in Sources */,
 				2426E712283448C300C513AF /* DomoticzData.swift in Sources */,
 				2426E713283448C300C513AF /* Lights.swift in Sources */,

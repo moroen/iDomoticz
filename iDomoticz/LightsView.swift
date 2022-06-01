@@ -32,7 +32,11 @@ struct LightsView<Content: View>: View {
             LazyVGrid(columns: gridItemLayout, spacing: 20) {
                 Group {
                     ForEach (lights) {light in
-                        LightButton(light: light)
+                        if (light.info.switchTypeCode==16) {
+                            BlindsButton(light: light)
+                        } else {
+                            LightButton(light: light)
+                        }
                     }
                 }
                 
@@ -41,4 +45,4 @@ struct LightsView<Content: View>: View {
         }
     }
 }
- 
+
