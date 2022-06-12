@@ -74,38 +74,64 @@ class DomoticzLight: ObservableObject, Identifiable {
 struct LightButton: View {
     @ObservedObject var light: DomoticzLight
     
+    @State var displaySize: CGFloat = .zero
+    @State var fraction: CGFloat = .zero
+    
+    private var Name: Text
+    
+    init(light: DomoticzLight) {
+        self.light = light
+        self.Name = Text(light.info.name)
+    }
+    
     var body: some View {
-        
+    
         Button(action: {
-            light.ToggleStatus()            
+            light.ToggleStatus()
         }) {
             HStack {
-                StateImageBuilder(state: light.info.status )
-                VStack {
-                    Text(light.info.name)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        // .modifier(FitToWidth(fraction: 1))
-                    /*
-                    HStack {
-                        Text(light.info.switchType)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        Text(light.info.switchTypeCode.description)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        //
-                    }
-                     */
-                }.modifier(FitToWidth(fraction: 1))
-                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                StateImageBuilder(state: light.info.status)
+                #if os(tvOS)
+                Name.modifier(FitToWidth(fraction: 1))
+                #else
+                Name
+                #endif
                 
-            
-        }.simultaneousGesture(LongPressGesture(minimumDuration: 1)
-            .onEnded { _ in
-                print("Loooong")
-                
-            }
-        )
+            } .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         
+        }
     }
+    /*
+     Button(action: {
+     light.ToggleStatus()
+     }) {
+     HStack {
+     StateImageBuilder(state: light.info.status )
+     VStack {
+     Text(light.info.name)
+     .frame(maxWidth: .infinity, alignment: .leading)
+     // .modifier(FitToWidth(fraction: 1))
+     /*
+      HStack {
+      Text(light.info.switchType)
+      .frame(maxWidth: .infinity, alignment: .leading)
+      Text(light.info.switchTypeCode.description)
+      .frame(maxWidth: .infinity, alignment: .leading)
+      //
+      }
+      */
+     }// .modifier(FitToWidth(fraction: 1))
+     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+     
+     
+     }.simultaneousGesture(LongPressGesture(minimumDuration: 1)
+     .onEnded { _ in
+     print("Loooong")
+     
+     }
+     )
+     */
+    
 }
 
 struct BlindsButton: View {
@@ -121,24 +147,24 @@ struct BlindsButton: View {
                 VStack {
                     Text(light.info.name)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        // .modifier(FitToWidth(fraction: 1))
+                    // .modifier(FitToWidth(fraction: 1))
                     HStack {
                         // Text(light.info.switchType).frame(maxWidth: .infinity, alignment: .leading)
-                 
+                        
                         //
                     }
                 }.modifier(FitToWidth(fraction: 1))
-                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                
+            }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            
             
         }
         /*
-        .simultaneousGesture(LongPressGesture(minimumDuration: 1)
-            .onEnded { _ in
-                print("Loooong")
-                
-            }
-        )
+         .simultaneousGesture(LongPressGesture(minimumDuration: 1)
+         .onEnded { _ in
+         print("Loooong")
+         
+         }
+         )
          */
         
     }

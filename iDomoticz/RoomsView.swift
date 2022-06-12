@@ -36,7 +36,7 @@ struct RoomsView: View {
 #else
             List {
                 RoomsList(domoticzData: domoticzData)
-            }
+            }.frame(alignment: .leading)
 #endif
         }
     }
@@ -60,7 +60,7 @@ struct RoomsList: View {
         ForEach(domoticzData.rooms) { room in
             NavigationLink(destination: LightsView(lights: domoticzData.lights.filter {$0.info.planID == room.idx}, header: { Text(room.name) })) {
                 Text(room.name)
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
     }
 }

@@ -7,26 +7,8 @@
 
 import Foundation
 import SwiftUI
+import MQTTNIO
 
-class Domoticz {
-    static let controller = Domoticz()
-    
-    
-    private var host: String
-    
-    private init() {
-        let _host = UserDefaults.standard.string(forKey: "server_host")
-        let _port = UserDefaults.standard.string(forKey: "server_port")
-        self.host = "http://\(_host ?? "localhost"):\(_port ?? "8080")"
-    }
-    
-    public func GetHost() -> String {
-        return self.host
-    }
-    
-  
-    
-}
 
 class DomoticzData: ObservableObject {
     @Published var scenes = [DomoticzScene]()
@@ -34,41 +16,15 @@ class DomoticzData: ObservableObject {
     @Published var lights = [DomoticzLight]()
     
     static let shared = DomoticzData()
+    
+    var mqttClient: MQTTClient?
  
     private init() {
         loadDataFromUrl()
     }
  
-    private var proto: String = "http"
-    
-    public var host: String {
-        get {
-            return UserDefaults.standard.string(forKey: "server_host") ?? "127.0.0.1"
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "server_host")
-        }
-    }
-
-    public var port: Int {
-        get {
-            let _port = UserDefaults.standard.integer(forKey: "server_port")
-            return _port != 0 ? _port : 8080
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: "server_port")
-        }
-    }
-    
-    private var server: String {
-        get {
-            return "\(proto)://\(host):\(port)"
-        }
-    }
-    
     public func DoJsonCommand(cmd: String) {
-        guard let url = URL(string: "\(server)/json.htm?\(cmd)")
+        guard let url = URL(string: "\(Settings().domoticzConfig.server)/json.htm?\(cmd)")
         else {
             print("Unable to set URLs")
             return
@@ -84,6 +40,7 @@ class DomoticzData: ObservableObject {
     }
     
     func loadDataFromUrl() {
+        let server = Settings().domoticzConfig.server
         print("Loading data from \(server)/")
                 
         guard let scenesurl = URL(string: "\(server)/json.htm?type=scenes"),

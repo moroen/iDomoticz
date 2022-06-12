@@ -13,12 +13,6 @@ import CoreData
 struct ScenesView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @State private var buttonMaxWidth: CGFloat?
-    
-    
-    
-    // private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    
     private var gridItemLayout = Array(repeating: GridItem(.flexible()), count: 3)
     
     private var scenes: [DomoticzScene]
@@ -29,53 +23,30 @@ struct ScenesView: View {
     
     
     var body: some View {
+        
+#if os(tvOS)
         ScrollView {
             LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                ForEach(scenes) { scene in
-                    SceneButton(scene: scene)
-                }
+                ScenesList(scenes: scenes)
             }
-         }
-         
-         
-         
-         }
-        
-    
-    private func rectReader(_ binding: Binding<CGFloat>) -> some View {
-        return GeometryReader { gp -> Color in
-            let val = gp.frame(in: .local).width
-            print(val, binding.wrappedValue)
-            DispatchQueue.main.async {
-                binding.wrappedValue = max(binding.wrappedValue, val)
-            }
-            
-            return Color.clear
         }
+#else
+            List {
+                ScenesList(scenes: scenes)
+            }
+#endif
+        
+      
     }
-    
 }
 
-private extension ScenesView {
-    struct HeightPreferenceKey: PreferenceKey {
-        static let defaultValue: CGFloat = 0
-        
-        static func reduce(
-            value: inout CGFloat,
-            nextValue: () -> CGFloat
-        ) {
-            value = max(value, nextValue())
+struct ScenesList: View {
+    let scenes: [DomoticzScene]
+    
+    var body: some View {
+        ForEach(scenes) { scene in
+            SceneButton(scene: scene)
         }
     }
 }
 
-
-/*
- struct ContentView_Previews: PreviewProvider {
- 
- static var previews: some View {
- ScenesView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
- }
- 
- }
- */

@@ -100,7 +100,7 @@ struct TestView: View {
                 priceHeight = $0
             }
             .padding(.horizontal)
-        }.navigationViewStyle(.stack)
+        }
     }
 }
 

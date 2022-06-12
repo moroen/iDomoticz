@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct CustomSettingsView: View {
     @ObservedObject var domoticzData: DomoticzData
-    @State private var ip: String
-    @State private var port: Int
+    @ObservedObject var settings: Settings
     
     enum FocusedField: Hashable {
         case ip
@@ -22,64 +21,104 @@ struct SettingsView: View {
     
     
     init(domoticzData: DomoticzData) {
-        self.ip = domoticzData.host
-        self.port = domoticzData.port
+        
+    
         self.domoticzData = domoticzData
+        self.settings = Settings()
     }
     
     var body: some View {
         
         VStack {
-            Form {
-         
-                
-                Section(header: Text("Server")) {
-                    TextField("Host", text: $ip)
-                    TextField("Port", value: $port, formatter: NumberFormatter()).focused($focusedField, equals: FocusedField.port)
+            List {
+                Section(header: Text("Domoticz")) {
+                    IOSStringItem(label: "Host", value: $settings.domoticzConfig.host)
+                    IOSIntItem(label: "Port", value: $settings.domoticzConfig.port)
                 }
-                
-                Section() {
-                
+                Section(header: Text("MQTT")) {
+                    IOSToggleItem(label: "Enable", value: $settings.mqttConfig.enabled)
+                    IOSStringItem(label: "Host", value: $settings.mqttConfig.host)
+                    IOSIntItem(label: "Port", value: $settings.mqttConfig.port)
                 }
-            }.onSubmit {
-                domoticzData.host=ip
-                domoticzData.port=port
             }
             
             Button(action: {
-                domoticzData.host=ip
-                domoticzData.port=port
+                self.settings.mqttConfig.saveConfig()
+                self.settings.domoticzConfig.saveConfig()
+            }) {
+                Text("Update")
+            }
+        }
+        
+        /*
+        VStack {
+            Form {
+         
+                Section(header: Text("Server")) {
+                    TextField("Host", text: $settings.domoticzConfig.host)
+                    
+                    HStack {
+                        Text("Port:")
+                    
+                    TextField("Port", value: $settings.domoticzConfig.port, formatter: NumberFormatter()).focused($focusedField, equals: FocusedField.port)
+                    }
+                }
+                
+                Section(header: Text("MQTT")) {
+                    Toggle("Use MQTT", isOn: $settings.mqttConfig.enabled)
+                    TextField("Host", text: $settings.mqttConfig.host)
+                    TextField("Port", value: $settings.mqttConfig.port, formatter: NumberFormatter())
+                }
+            }.onSubmit {
+            }
+            
+            Button(action: {
+                settings.mqttConfig.saveConfig()
                 domoticzData.loadDataFromUrl()
             }) {
                 Text("Update")
             }
         }
+         */
     }
 }
 
-struct ActionTextField: View {
-    @State private var value: String = ""
-    @FocusState private var hasFocus: Bool
-    
-    private var action: (String)->Void
-    
-    init(action: @escaping (String)->Void) {
-        self.action = action
-    }
+struct IOSStringItem: View {
+    var label: String
+    var value: Binding<String>
     
     var body: some View {
-        TextField("Test", text: $value).focused($hasFocus).onChange(of: hasFocus, perform: {focused in
-            if !focused {self.action(self.value)}
-        }).onSubmit {
-            self.action(self.value)
+        VStack(alignment: .leading, spacing: 2) {
+            Text(label).font(.caption).foregroundColor(Color(.placeholderText))
+            TextField("Host", text: value)
         }
     }
 }
+
+struct IOSIntItem: View {
+    var label: String
+    var value: Binding<Int>
     
-    /*
-     struct SettingsView_Previews: PreviewProvider {
-     static var previews: some View {
-     SettingsView()
-     }
-     }
-     */
+    var body: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(label).font(.caption).foregroundColor(Color(.placeholderText))
+            TextField("Host", value: value, formatter: NumberFormatter()).keyboardType(.numberPad)
+            
+        }
+    }
+}
+
+struct IOSToggleItem: View {
+    var label: String
+    var value: Binding<Bool>
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            // Text(label).font(.callout).foregroundColor(Color(.placeholderText))
+            Toggle(isOn: value) {Text(label).font(.caption).foregroundColor(Color(.placeholderText))}
+        }
+         
+            
+        
+    }
+}

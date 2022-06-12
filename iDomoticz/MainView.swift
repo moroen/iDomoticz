@@ -29,7 +29,7 @@ struct MainView: View {
     
     @StateObject var domoticzData = DomoticzData.shared
     
-    @State var selected = 1
+    @State var selected = 4
     
     var body: some View {
 
@@ -54,16 +54,13 @@ struct MainView: View {
                     Label("Scenes", systemImage: "theatermasks")
                 }.tag(3)
             
-            SettingsView(domoticzData: domoticzData)
+            CustomSettingsView(domoticzData: domoticzData)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }.tag(4)
         }
-        
     }
 }
-
-
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

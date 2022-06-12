@@ -23,28 +23,24 @@ struct FavoritesView: View {
     
     
     var body: some View {
+        
+#if os(tvOS)
         ScrollView {
             Text("Scenes").font(.title)
             ScenesView(scenes: domoticzData.scenes.filter {$0.favorite==1})
             Text("Lights").font(.title)
             LightsView(lights: domoticzData.lights.filter {$0.info.favorite==1}, header: { EmptyView() })
         }
-    }
-    
-    private func rectReader(_ binding: Binding<CGFloat>) -> some View {
-        return GeometryReader { gp -> Color in
-            DispatchQueue.main.async {
-                binding.wrappedValue = max(binding.wrappedValue, gp.frame(in: .local).width)
+#else
+        List {
+            Section (header: Text("Scenes")){
+                ScenesList(scenes: domoticzData.scenes.filter {$0.favorite==1})
             }
-            return Color.clear
+            Section (header: Text("Lights")) {
+                LightsList(lights: domoticzData.lights.filter {$0.info.favorite==1})
+            }
         }
+#endif
+        
     }
 }
-
-/*
-struct FavoritesView_Previews: PreviewProvider {
-    static var previews: some View {
-        RoomsView()
-    }
-}
-*/

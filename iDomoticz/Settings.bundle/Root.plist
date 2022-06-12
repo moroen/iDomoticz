@@ -8,13 +8,19 @@
 	<array>
 		<dict>
 			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Domoticz</string>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
 			<string>Host</string>
 			<key>Key</key>
 			<string>server_host</string>
 			<key>DefaultValue</key>
-			<string></string>
+			<string>127.0.0.1</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>
@@ -33,6 +39,44 @@
 			<string>server_port</string>
 			<key>KeyboardType</key>
 			<string>NumberPad</string>
+			<key>DefaultValue</key>
+			<string>8080</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>MQTT</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Use MQTT</string>
+			<key>Key</key>
+			<string>mqtt_enable</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Server</string>
+			<key>Key</key>
+			<string>mqtt_server</string>
+			<key>DefaultValue</key>
+			<string>127.0.0.1</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Port</string>
+			<key>Key</key>
+			<string>mqtt_port</string>
+			<key>DefaultValue</key>
+			<string>1883</string>
 		</dict>
 	</array>
 </dict>

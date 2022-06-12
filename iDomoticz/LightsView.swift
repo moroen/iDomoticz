@@ -18,31 +18,38 @@ struct LightsView<Content: View>: View {
     
     
     init(lights: [DomoticzLight], @ViewBuilder header: () -> Content) {
-        self.lights = lights
+        self.lights = lights.sorted {$0.info.name < $1.info.name}
         self.header = header()
     }
     
-    private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    
-    
+    private var gridItemLayout = Array(repeating: GridItem(.flexible()), count: 3)
     
     var body: some View {
         header.font(.largeTitle)
-        ScrollView {
-            LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                Group {
-                    ForEach (lights) {light in
-                        if (light.info.switchTypeCode==16) {
-                            BlindsButton(light: light)
-                        } else {
-                            LightButton(light: light)
-                        }
-                    }
+#if os(tvOS)
+            ScrollView {
+                LazyVGrid(columns: gridItemLayout, spacing: 20) {
+                    LightsList(lights: lights)
                 }
-                
             }
-            
-        }
+#else
+            List {
+                LightsList(lights: lights)
+            }
+#endif
     }
 }
 
+struct LightsList: View {
+    let lights: [DomoticzLight]
+    
+    var body: some View {
+        ForEach (lights) {light in
+            if (light.info.switchTypeCode==16) {
+                BlindsButton(light: light)
+            } else {
+                LightButton(light: light)
+            }
+        }
+    }
+}
