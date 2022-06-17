@@ -16,89 +16,96 @@ import Foundation
 import SwiftUI
 
 // MARK: - Lights
+
 struct DomoticzLights: Codable {
     let result: [DomoticzLightDefinition]
     // let status, title: String
 }
 
 // MARK: - Result
+
 struct DomoticzLightDefinition: Codable, Identifiable {
     let name, idx, planID: String
     var status: String
     let switchType: String
     let switchTypeCode, level: Int
     let favorite: Int
-    
+
     var id = UUID()
-    
+
     enum CodingKeys: String, CodingKey {
-        
         case name = "Name"
         case planID = "PlanID"
         case favorite = "Favorite"
         case switchType = "SwitchType"
         case switchTypeCode = "SwitchTypeVal"
-        case level="Level"
+        case level = "Level"
         case status = "Status"
         case idx
     }
 }
 
-class DomoticzLight: ObservableObject, Identifiable {
+class DomoticzLight: ObservableObject, Identifiable, DomoticzDevice {
     @Published var info: DomoticzLightDefinition
-    
+
     var id = UUID()
-    
+
     init(definition: DomoticzLightDefinition) {
-        self.info = definition
-        if self.info.switchTypeCode==7 && self.info.status != "Off"{
-            self.info.status = self.info.level > 0 ? "On" : "Off"
+        info = definition
+        if info.switchTypeCode == 7, info.status != "Off" {
+            info.status = info.level > 0 ? "On" : "Off"
+        }
+    }
+
+    
+    public func UpdateStatus(status: String) {
+        DispatchQueue.main.async {
+            self.info.status = status
         }
     }
     
     public func SetStatus(status: String) {
-        self.info.status=status
-        
-        let cmd = "type=command&param=switchlight&idx=\(self.info.idx)&switchcmd=\(status)"
+        let cmd = "type=command&param=switchlight&idx=\(info.idx)&switchcmd=\(status)"
         print(cmd)
         DomoticzData.shared.DoJsonCommand(cmd: cmd)
+        if !Settings().mqttConfig.enabled {
+            print("Manual status update")
+            self.UpdateStatus(status: status)
+        }
     }
-    
+
     public func ToggleStatus() {
-        self.info.status = self.info.status == "On" ? "Off" : "On"
-        self.SetStatus(status: self.info.status)
+        info.status = info.status == "On" ? "Off" : "On"
+        SetStatus(status: info.status)
     }
-    
 }
 
 struct LightButton: View {
     @ObservedObject var light: DomoticzLight
-    
+
     @State var displaySize: CGFloat = .zero
     @State var fraction: CGFloat = .zero
-    
+
     private var Name: Text
-    
+
     init(light: DomoticzLight) {
         self.light = light
-        self.Name = Text(light.info.name)
+        Name = Text(light.info.name)
     }
-    
+
     var body: some View {
-    
         Button(action: {
             light.ToggleStatus()
         }) {
             HStack {
                 StateImageBuilder(state: light.info.status)
                 #if os(tvOS)
-                Name.modifier(FitToWidth(fraction: 1))
+                    Name.modifier(FitToWidth(fraction: 1))
                 #else
-                Name
+                    Name
                 #endif
-                
-            } .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-        
+
+            }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         }
     }
     /*
@@ -122,23 +129,20 @@ struct LightButton: View {
       */
      }// .modifier(FitToWidth(fraction: 1))
      }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-     
-     
+
      }.simultaneousGesture(LongPressGesture(minimumDuration: 1)
      .onEnded { _ in
      print("Loooong")
-     
+
      }
      )
      */
-    
 }
 
 struct BlindsButton: View {
     @ObservedObject var light: DomoticzLight
-    
+
     var body: some View {
-        
         Button(action: {
             // light.ToggleStatus()
         }) {
@@ -150,22 +154,19 @@ struct BlindsButton: View {
                     // .modifier(FitToWidth(fraction: 1))
                     HStack {
                         // Text(light.info.switchType).frame(maxWidth: .infinity, alignment: .leading)
-                        
+
                         //
                     }
                 }.modifier(FitToWidth(fraction: 1))
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-            
-            
         }
         /*
          .simultaneousGesture(LongPressGesture(minimumDuration: 1)
          .onEnded { _ in
          print("Loooong")
-         
+
          }
          )
          */
-        
     }
 }

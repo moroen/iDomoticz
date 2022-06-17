@@ -5,11 +5,10 @@
 //  Created by Morten Waldvogel-Rønning on 17/05/2022.
 //
 
-import XCTest
 @testable import iOSDomoticz
+import XCTest
 
 class iOSDomoticzTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -28,9 +27,8 @@ class iOSDomoticzTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

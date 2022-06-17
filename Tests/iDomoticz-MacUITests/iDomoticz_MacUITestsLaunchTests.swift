@@ -8,7 +8,6 @@
 import XCTest
 
 class iDomoticz_MacUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

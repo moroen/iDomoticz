@@ -9,29 +9,29 @@ import Foundation
 
 /*
  struct DomoticzScene:Codable {
- 
+
  var name: String?
  var sceneid: String?
- 
+
  private enum CodingKeys: String, CodingKey {
  case name
  case sceneid = "idx"
  }
  }
- 
+
  struct DomoticzScenes: Codable {
  var DayLength: String?
  var Result: [DomoticzScene]
- 
+
  private enum CodingKeys: String, CodingKey {
  case DayLength
  case Result = "result"
  }
- 
+
  private enum CollectionCodingKeys: String, CodingKey {
  case Result = "result"
  }
- 
+
  init(from decoder: Decoder) throws {
  let container = try decoder.container(keyedBy: CodingKeys.self)
  let collection = try container.nestedContainer(keyedBy: CollectionCodingKeys.self, forKey: .Result)
@@ -49,19 +49,20 @@ import Foundation
 import SwiftUI
 
 // MARK: - Welcome
+
 struct DomoticzScenes: Codable {
     let status, title: String
     let result: [DomoticzScene]
-    
+
     enum CodingKeys: String, CodingKey {
         case result
         case status
         case title
-        
     }
 }
 
 // MARK: - Result
+
 struct DomoticzScene: Codable, Identifiable {
     let resultDescription: String
     let favorite: Int
@@ -70,9 +71,9 @@ struct DomoticzScene: Codable, Identifiable {
     let status, timers, type: String
     let usedByCamera: Bool
     let idx: String
-    
+
     var id = UUID()
-    
+
     enum CodingKeys: String, CodingKey {
         case resultDescription = "Description"
         case favorite = "Favorite"
@@ -89,26 +90,22 @@ struct DomoticzScene: Codable, Identifiable {
     }
 }
 
-
-
-
 struct SceneButton: View {
     @State private var maxWidth: CGFloat = .zero
-    
+
     var scene: DomoticzScene
-    
+
     var body: some View {
-        
         Button(action: {
             activateScene(sceneid: scene.idx)
         }) {
             HStack {
                 Image(systemName: "theatermasks")
                 Text(scene.name)
-            } .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         }
     }
-    
+
     private func rectReader(_ binding: Binding<CGFloat>) -> some View {
         return GeometryReader { gp -> Color in
             DispatchQueue.main.async {
@@ -119,19 +116,18 @@ struct SceneButton: View {
     }
 }
 
-
 func activateScene(sceneid: String) {
     guard let url = URL(string: "http://zwave.local:8080/json.htm?type=command&param=switchscene&idx=\(sceneid)&switchcmd=On")
     else {
         return
     }
-    
-    let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+
+    let task = URLSession.shared.dataTask(with: url, completionHandler: { _, _, error in
         if let error = error {
             print(error)
             return
         }
-        
+
     })
     task.resume()
 }

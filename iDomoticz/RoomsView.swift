@@ -9,39 +9,37 @@ import SwiftUI
 
 struct RoomsView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
+
     @ObservedObject var domoticzData: DomoticzData
-    
+
     @State private var maxWidth: CGFloat = .zero
-    
-    
+
     // private var gridItemLayout: [GridItem]
-    
+
     public init(domoticzData: DomoticzData) {
         self.domoticzData = domoticzData
     }
-    
-#if os(tvOS)
-#else
-#endif
-    
+
+    #if os(tvOS)
+    #else
+    #endif
+
     var body: some View {
         NavigationView {
-#if os(tvOS)
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-                    RoomsList(domoticzData: domoticzData)
+            #if os(tvOS)
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
+                        RoomsList(domoticzData: domoticzData)
+                    }
                 }
-            }
-#else
-            List {
-                RoomsList(domoticzData: domoticzData)
-            }.frame(alignment: .leading)
-#endif
+            #else
+                List {
+                    RoomsList(domoticzData: domoticzData)
+                }.frame(alignment: .leading)
+            #endif
         }
     }
-    
-    
+
     private func rectReader(_ binding: Binding<CGFloat>) -> some View {
         return GeometryReader { gp -> Color in
             DispatchQueue.main.async {
@@ -52,24 +50,15 @@ struct RoomsView: View {
     }
 }
 
-
 struct RoomsList: View {
     @ObservedObject var domoticzData: DomoticzData
-    
+
     var body: some View {
         ForEach(domoticzData.rooms) { room in
-            NavigationLink(destination: LightsView(lights: domoticzData.lights.filter {$0.info.planID == room.idx}, header: { Text(room.name) })) {
+            NavigationLink(destination: LightsView(lights: domoticzData.lights.filter { $0.info.planID == room.idx }, header: { Text(room.name) })) {
                 Text(room.name)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
+        }
     }
 }
-}
-
-/*
- struct RoomsView_Previews: PreviewProvider {
- static var previews: some View {
- RoomsView()
- }
- }
- */

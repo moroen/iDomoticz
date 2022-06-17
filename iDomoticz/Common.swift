@@ -11,36 +11,32 @@ import SwiftUI
 struct FitToWidth: ViewModifier {
     var fraction: CGFloat = 1.0
     func body(content: Content) -> some View {
-        
         GeometryReader { g in
-        content
-            .font(.system(size: 1000))
-            .minimumScaleFactor(0.005)
-            .lineLimit(1)
-            .frame(width: g.size.width*self.fraction)
-        
+            content
+                .font(.system(size: 1000))
+                .minimumScaleFactor(0.005)
+                .lineLimit(1)
+                .frame(width: g.size.width * self.fraction)
         }
     }
 }
 
 struct ScaleToWidth: ViewModifier {
     var width: CGFloat
-    
+
     func body(content: Content) -> some View {
-     content
+        content
             .font(.system(size: 1000))
             .minimumScaleFactor(0.005)
             .lineLimit(1)
-            .frame(width: self.width)
-        
+            .frame(width: width)
     }
 }
 
 // View builders
 @ViewBuilder
 public func StateImageBuilder(state: String) -> some View {
-    
-    if state=="On" {
+    if state == "On" {
         Image(systemName: "lightbulb.fill").foregroundColor(Color(.systemYellow))
     } else {
         Image(systemName: "lightbulb")
@@ -48,18 +44,18 @@ public func StateImageBuilder(state: String) -> some View {
 }
 
 struct SizePreferenceKey: PreferenceKey {
-  static var defaultValue: CGSize = .zero
-  static func reduce(value: inout CGSize, nextValue: () -> CGSize) {}
+    static var defaultValue: CGSize = .zero
+    static func reduce(value _: inout CGSize, nextValue _: () -> CGSize) {}
 }
 
 extension View {
-  func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
-    background(
-      GeometryReader { geometryProxy in
-        Color.clear
-          .preference(key: SizePreferenceKey.self, value: geometryProxy.size)
-      }
-    )
-    .onPreferenceChange(SizePreferenceKey.self, perform: onChange)
-  }
+    func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
+        background(
+            GeometryReader { geometryProxy in
+                Color.clear
+                    .preference(key: SizePreferenceKey.self, value: geometryProxy.size)
+            }
+        )
+        .onPreferenceChange(SizePreferenceKey.self, perform: onChange)
+    }
 }

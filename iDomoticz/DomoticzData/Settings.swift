@@ -8,50 +8,60 @@
 import Foundation
 import SwiftUI
 
-class MQTTConfig:ObservableObject, ConfigObject {
-    @Published public var enabled: Bool
-    @Published public var host: String
-    @Published public var port: Int
+class MQTTConfig: ObservableObject, ConfigObject {
+    @Published public var enabled: Bool = false
+    @Published public var host: String = ""
+    @Published public var topic: String = ""
+    @Published public var port: Int = 0
 
     init() {
-        self.enabled = UserDefaults.standard.bool(forKey: "mqtt_enable")
-        self.host = UserDefaults.standard.string(forKey: "mqtt_server") ?? "localhost"
-        self.port = UserDefaults.standard.integer(forKey: "mqtt_port")
-        if self.port == 0 { self.port = 1883}
+        update()
+    }
+
+    public func saveConfig() {
+        UserDefaults.standard.set(enabled, forKey: "mqtt_enable")
+        UserDefaults.standard.set(host, forKey: "mqtt_server")
+        UserDefaults.standard.set(port, forKey: "mqtt_port")
+        UserDefaults.standard.set(topic, forKey: "mqtt_topic")
     }
     
-    public func saveConfig () -> Void {
-        UserDefaults.standard.set(self.enabled, forKey: "mqtt_enable")
-        UserDefaults.standard.set(self.host, forKey: "mqtt_server")
-        UserDefaults.standard.set(self.port, forKey: "mqtt_port")
+    public func update() {
+        enabled = UserDefaults.standard.bool(forKey: "mqtt_enable")
+        host = UserDefaults.standard.string(forKey: "mqtt_server") ?? "localhost"
+        topic = UserDefaults.standard.string(forKey: "mqtt_topic") ?? "domoticz/out"
+        port = UserDefaults.standard.integer(forKey: "mqtt_port")
+        if port == 0 { port = 1883 }
     }
 }
 
 class DomoticzConfig: ObservableObject, ConfigObject {
-    @Published public var host: String
-    @Published public var port: Int
+    @Published public var host: String = ""
+    @Published public var port: Int = 0
     let proto = "http"
-    
-    init () {
-        self.host = UserDefaults.standard.string(forKey: "server_host") ?? "127.0.0.1"
-        self.port = UserDefaults.standard.integer(forKey: "server_port")
-        self.port = port != 0 ? port : 8080
+
+    init() {
+        self.update()
     }
     
+    public func update() {
+        host = UserDefaults.standard.string(forKey: "server_host") ?? "127.0.0.1"
+        port = UserDefaults.standard.integer(forKey: "server_port")
+        port = port != 0 ? port : 8080
+    }
+
     public func saveConfig() {
-        UserDefaults.standard.set(self.host, forKey: "server_host")
-        UserDefaults.standard.set(self.port, forKey: "server_port")
+        UserDefaults.standard.set(host, forKey: "server_host")
+        UserDefaults.standard.set(port, forKey: "server_port")
     }
-    
+
     public var server: String {
-        get {
-            return "\(proto)://\(host):\(port)"
-        }
+        return "\(proto)://\(host):\(port)"
     }
 }
 
 protocol ConfigObject {
     func saveConfig()
+    func update()
 }
 
 class Settings: ObservableObject {
@@ -59,13 +69,17 @@ class Settings: ObservableObject {
 
     @Published public var mqttConfig = MQTTConfig()
     @Published public var domoticzConfig = DomoticzConfig()
-    
-    init() {
-    
-    }
-    
+
+    init() {}
+
     public func saveSettings() {
-        self.mqttConfig.saveConfig()
-        self.domoticzConfig.saveConfig()
+        mqttConfig.saveConfig()
+        domoticzConfig.saveConfig()
     }
+    
+    public func update() {
+        self.mqttConfig.update()
+        self.domoticzConfig.update()
+    }
+    
 }

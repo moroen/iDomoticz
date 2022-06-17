@@ -10,14 +10,13 @@ import SwiftUI
 @main
 struct iDomoticzApp: App {
     let persistenceController = PersistenceController.shared
-    
+
     init() {
         // UserDefaults.standard.register(defaults: [String:AnyObject]())
         // let test = UserDefaults.standard.string(forKey: "server_host")
         // print(test)
     }
-    
-    
+
     var body: some Scene {
         WindowGroup {
             MainView()
@@ -25,4 +24,3 @@ struct iDomoticzApp: App {
         }
     }
 }
-

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TestView: View {
     @State private var priceHeight: CGFloat = 50
-    
+
     private var items: [GridItem] {
         Array(
             repeating: GridItem(
@@ -19,7 +19,7 @@ struct TestView: View {
             count: 2
         )
     }
-    
+
     var body: some View {
         NavigationView {
             LazyVGrid(columns: items, spacing: 10) {
@@ -95,7 +95,7 @@ struct TestView: View {
                         )
                 }
             }
-            
+
             .onPreferenceChange(HeightPreferenceKey.self) {
                 priceHeight = $0
             }
@@ -106,7 +106,7 @@ struct TestView: View {
 
 struct TileCellView: View {
     let text: String
-    
+
     var body: some View {
         ZStack {
             Text(text)
@@ -120,7 +120,7 @@ struct TileCellView: View {
 private extension TestView {
     struct HeightPreferenceKey: PreferenceKey {
         static let defaultValue: CGFloat = 0
-        
+
         static func reduce(
             value: inout CGFloat,
             nextValue: () -> CGFloat

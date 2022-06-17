@@ -78,6 +78,16 @@
 			<key>DefaultValue</key>
 			<string>1883</string>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Topic</string>
+			<key>Key</key>
+			<string>mqtt_topic</string>
+			<key>DefaultValue</key>
+			<string>domoticz/out</string>
+		</dict>
 	</array>
 </dict>
 </plist>
