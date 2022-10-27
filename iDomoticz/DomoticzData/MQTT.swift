@@ -30,35 +30,39 @@ struct DomoticzPayload: Codable {
 }
 
 extension DomoticzData {
-    public func connectMQTT() {
-        self.mqttClient=MQTTClient(
+    func connectMQTT() {
+        self.mqttClient = MQTTClient(
             configuration: .init(
-                target: .host("127.0.0.1", port: 1883)
-                // protocolVersion: .version3_1_1
+                target: .host(self.settings.mqttConfig.host, port: self.settings.mqttConfig.port),
+                protocolVersion: .version3_1_1
             ),
             eventLoopGroupProvider: .createNew
         )
-        
+
         self.mqttClient?.whenConnected { response in
             print("MQTT Connected, is session present: \(response.isSessionPresent)")
         }
-        
-        self.mqttClient?.whenDisconnected { response in
+
+        self.mqttClient?.whenDisconnected { _ in
             print("MQTT Disconnected")
+        }
+
+        self.mqttClient?.whenConnectionFailure {response in
+            print("MQTT Connection to \(self.settings.mqttConfig.host):\(self.settings.mqttConfig.port) failed")
         }
         
         self.mqttClient?.subscribe(to: "domoticz/out")
-        
+
         self.mqttClient?.whenMessage(forTopic: "domoticz/out") { message in
-            print("MQTT Received message")
+            // print("MQTT Received message")
             guard let payload = try? message.payload.decode(DomoticzPayload.self)
             else { print("Decode error")
                 return
             }
-            let status = payload.nvalue == 0 ? "Off":"On"
-            self.GetDevice(idx: String(payload.idx))?.UpdateStatus(status: status)
+            let status = payload.nvalue == 0 ? "Off" : "On"
+            self.GetDevice(idx: String(payload.idx))?.updateStatus(status: status)
         }
-        
+
         if self.settings.mqttConfig.enabled {
             self.mqttClient!.connect()
         } else {

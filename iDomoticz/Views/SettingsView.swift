@@ -83,14 +83,14 @@ struct CustomSettingsView: View {
 @ViewBuilder func LabelTextView(_ label: String, value: Binding<String>) -> some View {
     VStack(alignment: .leading, spacing: 2) {
         Text(label).font(.caption).foregroundColor(Color(.placeholderText))
-        TextField("Host", text: value)
+        TextField(label, text: value)
     }
 }
 
 @ViewBuilder func LabelTextView(_ label: String, value: Binding<Int>) -> some View {
     VStack(alignment: .leading, spacing: 2) {
         Text(label).font(.caption).foregroundColor(Color(.placeholderText))
-        TextField("Host", value: value, formatter: NumberFormatter()).keyboardType(.numberPad)
+        TextField(label, value: value, formatter: NumberFormatter()).keyboardType(.numberPad)
     }
 }
 

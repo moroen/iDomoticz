@@ -57,21 +57,31 @@
 		2426E718283448C300C513AF /* LightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F875522829C0E100B82D4C /* LightsView.swift */; };
 		2426E71A283448C300C513AF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F87554282AF3DD00B82D4C /* SettingsView.swift */; };
 		2426E71B2834494D00C513AF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2414C542282486480044F709 /* Settings.bundle */; };
+		248CA2B4290AD853004AC7C9 /* MQTTNIO in Frameworks */ = {isa = PBXBuildFile; productRef = 248CA2B3290AD853004AC7C9 /* MQTTNIO */; };
+		248CA2B6290AD8E1004AC7C9 /* MQTTNIO in Frameworks */ = {isa = PBXBuildFile; productRef = 248CA2B5290AD8E1004AC7C9 /* MQTTNIO */; };
+		248CA2B8290ADA70004AC7C9 /* MQTTNIO in Frameworks */ = {isa = PBXBuildFile; productRef = 248CA2B7290ADA70004AC7C9 /* MQTTNIO */; };
+		2492148B285F8BEF0013A9A3 /* Temps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492148A285F8BEF0013A9A3 /* Temps.swift */; };
+		2492148C285F8BEF0013A9A3 /* Temps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492148A285F8BEF0013A9A3 /* Temps.swift */; };
+		2492148D285F8BEF0013A9A3 /* Temps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492148A285F8BEF0013A9A3 /* Temps.swift */; };
 		249DF5F3283E902900D52F6E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2414C542282486480044F709 /* Settings.bundle */; };
-		24AB9C892844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
-		24AB9C8A2844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
-		24AB9C8B2844E5A40043FDEA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C882844E5A40043FDEA /* TestView.swift */; };
+		24A3BBD22861351700F8D210 /* ClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBD12861351700F8D210 /* ClockWidget.swift */; };
+		24A3BBD32861351800F8D210 /* ClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBD12861351700F8D210 /* ClockWidget.swift */; };
+		24A3BBD42861351800F8D210 /* ClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBD12861351700F8D210 /* ClockWidget.swift */; };
+		24A3BBD62861D57F00F8D210 /* SensorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBD52861D57F00F8D210 /* SensorsView.swift */; };
+		24A3BBD72861D57F00F8D210 /* SensorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBD52861D57F00F8D210 /* SensorsView.swift */; };
+		24A3BBD82861D57F00F8D210 /* SensorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBD52861D57F00F8D210 /* SensorsView.swift */; };
+		24A3BBDC286218AE00F8D210 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBDB286218AE00F8D210 /* Device.swift */; };
+		24A3BBDD286218AE00F8D210 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBDB286218AE00F8D210 /* Device.swift */; };
+		24A3BBDE286218AE00F8D210 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3BBDB286218AE00F8D210 /* Device.swift */; };
 		24AB9C8D284789A10043FDEA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C8C284789A10043FDEA /* Common.swift */; };
 		24AB9C8E284789A10043FDEA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C8C284789A10043FDEA /* Common.swift */; };
 		24AB9C8F284789A10043FDEA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB9C8C284789A10043FDEA /* Common.swift */; };
 		24AB9C91284798860043FDEA /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB9C90284798860043FDEA /* Common.xcassets */; };
 		24AB9C92284798860043FDEA /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB9C90284798860043FDEA /* Common.xcassets */; };
 		24AB9C93284798860043FDEA /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB9C90284798860043FDEA /* Common.xcassets */; };
-		24B103BA28551EC60092F56C /* MQTTNIO in Frameworks */ = {isa = PBXBuildFile; productRef = 24B103B928551EC60092F56C /* MQTTNIO */; };
 		24B58CC128526F3500A1F9E4 /* MQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B58CC028526F3500A1F9E4 /* MQTT.swift */; };
 		24B58CC228526F3500A1F9E4 /* MQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B58CC028526F3500A1F9E4 /* MQTT.swift */; };
 		24B58CC328526F3500A1F9E4 /* MQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B58CC028526F3500A1F9E4 /* MQTT.swift */; };
-		24B58CC62852702200A1F9E4 /* MQTTNIO in Frameworks */ = {isa = PBXBuildFile; productRef = 24B58CC52852702200A1F9E4 /* MQTTNIO */; };
 		24B58CC8285291C500A1F9E4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B58CC7285291C500A1F9E4 /* Settings.swift */; };
 		24B58CC9285291C500A1F9E4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B58CC7285291C500A1F9E4 /* Settings.swift */; };
 		24B58CCA285291C500A1F9E4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B58CC7285291C500A1F9E4 /* Settings.swift */; };
@@ -165,10 +175,12 @@
 		2426E6FF283447AA00C513AF /* iOSDomoticzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDomoticzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2426E703283447AA00C513AF /* iOSDomoticzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDomoticzUITests.swift; sourceTree = "<group>"; };
 		2426E705283447AA00C513AF /* iOSDomoticzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDomoticzUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		24AB9C882844E5A40043FDEA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		2492148A285F8BEF0013A9A3 /* Temps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temps.swift; sourceTree = "<group>"; };
+		24A3BBD12861351700F8D210 /* ClockWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockWidget.swift; sourceTree = "<group>"; };
+		24A3BBD52861D57F00F8D210 /* SensorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsView.swift; sourceTree = "<group>"; };
+		24A3BBDB286218AE00F8D210 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		24AB9C8C284789A10043FDEA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		24AB9C90284798860043FDEA /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Common.xcassets; sourceTree = "<group>"; };
-		24B58CBF28526D7300A1F9E4 /* mqtt-nio */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "mqtt-nio"; path = "../mqtt-nio"; sourceTree = "<group>"; };
 		24B58CC028526F3500A1F9E4 /* MQTT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTT.swift; sourceTree = "<group>"; };
 		24B58CC7285291C500A1F9E4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		24F875522829C0E100B82D4C /* LightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsView.swift; sourceTree = "<group>"; };
@@ -180,7 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24B58CC62852702200A1F9E4 /* MQTTNIO in Frameworks */,
+				248CA2B4290AD853004AC7C9 /* MQTTNIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248CA2B6290AD8E1004AC7C9 /* MQTTNIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24B103BA28551EC60092F56C /* MQTTNIO in Frameworks */,
+				248CA2B8290ADA70004AC7C9 /* MQTTNIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +260,6 @@
 		24108EC0280A333200BD4CAB = {
 			isa = PBXGroup;
 			children = (
-				24B58CBE28526D7300A1F9E4 /* Packages */,
 				24A4F40A28353A3A00E557E2 /* Tests */,
 				2426E6AD283444E100C513AF /* macDomoticz */,
 				2426E6E7283447AA00C513AF /* iOSDomoticz */,
@@ -277,18 +289,13 @@
 		24108ECB280A333200BD4CAB /* iDomoticz */ = {
 			isa = PBXGroup;
 			children = (
+				24A3BBDA2861DB7000F8D210 /* Widgets */,
+				24A3BBD92861DB2400F8D210 /* Views */,
 				2414C53B282095690044F709 /* DomoticzData */,
-				24108ECE280A333200BD4CAB /* ScenesView.swift */,
 				24108ED5280A333500BD4CAB /* Persistence.swift */,
 				24108ED7280A333500BD4CAB /* iDomoticz.xcdatamodeld */,
 				24108ED2280A333500BD4CAB /* Preview Content */,
-				2414C535282081190044F709 /* MainView.swift */,
-				2414C537282081D80044F709 /* RoomsView.swift */,
-				2414C5402821E6F60044F709 /* FavoritesView.swift */,
-				24F875522829C0E100B82D4C /* LightsView.swift */,
 				2414C542282486480044F709 /* Settings.bundle */,
-				24F87554282AF3DD00B82D4C /* SettingsView.swift */,
-				24AB9C882844E5A40043FDEA /* TestView.swift */,
 				24AB9C8C284789A10043FDEA /* Common.swift */,
 				24AB9C90284798860043FDEA /* Common.xcassets */,
 			);
@@ -323,12 +330,14 @@
 		2414C53B282095690044F709 /* DomoticzData */ = {
 			isa = PBXGroup;
 			children = (
-				2414C539282092700044F709 /* Rooms.swift */,
-				241E496C280B6AE50018ED42 /* Scenes.swift */,
+				24A3BBDB286218AE00F8D210 /* Device.swift */,
 				2414C53C2820959F0044F709 /* DomoticzData.swift */,
 				2414C53E2821D0310044F709 /* Lights.swift */,
 				24B58CC028526F3500A1F9E4 /* MQTT.swift */,
+				2414C539282092700044F709 /* Rooms.swift */,
+				241E496C280B6AE50018ED42 /* Scenes.swift */,
 				24B58CC7285291C500A1F9E4 /* Settings.swift */,
+				2492148A285F8BEF0013A9A3 /* Temps.swift */,
 			);
 			path = DomoticzData;
 			sourceTree = "<group>";
@@ -405,6 +414,28 @@
 			path = iOSDomoticzUITests;
 			sourceTree = "<group>";
 		};
+		24A3BBD92861DB2400F8D210 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2414C5402821E6F60044F709 /* FavoritesView.swift */,
+				24F875522829C0E100B82D4C /* LightsView.swift */,
+				2414C535282081190044F709 /* MainView.swift */,
+				2414C537282081D80044F709 /* RoomsView.swift */,
+				24108ECE280A333200BD4CAB /* ScenesView.swift */,
+				24A3BBD52861D57F00F8D210 /* SensorsView.swift */,
+				24F87554282AF3DD00B82D4C /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24A3BBDA2861DB7000F8D210 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				24A3BBD12861351700F8D210 /* ClockWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
 		24A4F409283533F600E557E2 /* tvDomoticz */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,14 +456,6 @@
 				2426E702283447AA00C513AF /* iOSDomoticzUITests */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		24B58CBE28526D7300A1F9E4 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				24B58CBF28526D7300A1F9E4 /* mqtt-nio */,
-			);
-			name = Packages;
 			sourceTree = "<group>";
 		};
 		24B58CC42852702200A1F9E4 /* Frameworks */ = {
@@ -459,7 +482,7 @@
 			);
 			name = tvDomoticz;
 			packageProductDependencies = (
-				24B58CC52852702200A1F9E4 /* MQTTNIO */,
+				248CA2B3290AD853004AC7C9 /* MQTTNIO */,
 			);
 			productName = iDomoticz;
 			productReference = 24108EC9280A333200BD4CAB /* tvDomoticz.app */;
@@ -514,6 +537,9 @@
 			dependencies = (
 			);
 			name = macDomoticz;
+			packageProductDependencies = (
+				248CA2B5290AD8E1004AC7C9 /* MQTTNIO */,
+			);
 			productName = "iDomoticz-Mac";
 			productReference = 2426E6AC283444E100C513AF /* macDomoticz.app */;
 			productType = "com.apple.product-type.application";
@@ -568,7 +594,7 @@
 			);
 			name = iOSDomoticz;
 			packageProductDependencies = (
-				24B103B928551EC60092F56C /* MQTTNIO */,
+				248CA2B7290ADA70004AC7C9 /* MQTTNIO */,
 			);
 			productName = iOSDomoticz;
 			productReference = 2426E6E6283447A900C513AF /* iOSDomoticz.app */;
@@ -664,6 +690,9 @@
 				Base,
 			);
 			mainGroup = 24108EC0280A333200BD4CAB;
+			packageReferences = (
+				248CA2B2290AD853004AC7C9 /* XCRemoteSwiftPackageReference "mqtt-nio" */,
+			);
 			productRefGroup = 24108ECA280A333200BD4CAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -764,9 +793,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24AB9C892844E5A40043FDEA /* TestView.swift in Sources */,
+				24A3BBD62861D57F00F8D210 /* SensorsView.swift in Sources */,
 				2414C5412821E6F60044F709 /* FavoritesView.swift in Sources */,
 				2414C536282081190044F709 /* MainView.swift in Sources */,
+				2492148B285F8BEF0013A9A3 /* Temps.swift in Sources */,
+				24A3BBD22861351700F8D210 /* ClockWidget.swift in Sources */,
 				24B58CC8285291C500A1F9E4 /* Settings.swift in Sources */,
 				24108ED9280A333500BD4CAB /* iDomoticz.xcdatamodeld in Sources */,
 				2414C53D2820959F0044F709 /* DomoticzData.swift in Sources */,
@@ -781,6 +812,7 @@
 				24108ECD280A333200BD4CAB /* iDomoticzApp.swift in Sources */,
 				24AB9C8D284789A10043FDEA /* Common.swift in Sources */,
 				24F87555282AF3DD00B82D4C /* SettingsView.swift in Sources */,
+				24A3BBDC286218AE00F8D210 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,12 +837,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24AB9C8A2844E5A40043FDEA /* TestView.swift in Sources */,
 				2426E6D82834470E00C513AF /* Rooms.swift in Sources */,
+				24A3BBD72861D57F00F8D210 /* SensorsView.swift in Sources */,
 				24AB9C8E284789A10043FDEA /* Common.swift in Sources */,
+				24A3BBDD286218AE00F8D210 /* Device.swift in Sources */,
 				24B58CC228526F3500A1F9E4 /* MQTT.swift in Sources */,
 				2426E6D92834470E00C513AF /* Scenes.swift in Sources */,
 				2426E6DA2834470E00C513AF /* DomoticzData.swift in Sources */,
+				24A3BBD32861351800F8D210 /* ClockWidget.swift in Sources */,
 				2426E6DB2834470E00C513AF /* Lights.swift in Sources */,
 				2426E6DC2834470E00C513AF /* ScenesView.swift in Sources */,
 				2426E6DD2834470E00C513AF /* MainView.swift in Sources */,
@@ -820,6 +854,7 @@
 				2426E6E02834470E00C513AF /* LightsView.swift in Sources */,
 				2426E6E12834470E00C513AF /* SettingsView.swift in Sources */,
 				2426E6D72834468F00C513AF /* iDomoticz_MacApp.swift in Sources */,
+				2492148C285F8BEF0013A9A3 /* Temps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,12 +879,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24AB9C8B2844E5A40043FDEA /* TestView.swift in Sources */,
 				2426E710283448C300C513AF /* Rooms.swift in Sources */,
+				24A3BBD82861D57F00F8D210 /* SensorsView.swift in Sources */,
 				24AB9C8F284789A10043FDEA /* Common.swift in Sources */,
+				24A3BBDE286218AE00F8D210 /* Device.swift in Sources */,
 				24B58CC328526F3500A1F9E4 /* MQTT.swift in Sources */,
 				2426E711283448C300C513AF /* Scenes.swift in Sources */,
 				2426E712283448C300C513AF /* DomoticzData.swift in Sources */,
+				24A3BBD42861351800F8D210 /* ClockWidget.swift in Sources */,
 				2426E713283448C300C513AF /* Lights.swift in Sources */,
 				2426E714283448C300C513AF /* ScenesView.swift in Sources */,
 				2426E715283448C300C513AF /* MainView.swift in Sources */,
@@ -859,6 +896,7 @@
 				2426E718283448C300C513AF /* LightsView.swift in Sources */,
 				2426E71A283448C300C513AF /* SettingsView.swift in Sources */,
 				2426E6E9283447AA00C513AF /* iOSDomoticzApp.swift in Sources */,
+				2492148D285F8BEF0013A9A3 /* Temps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1532,13 +1570,31 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		248CA2B2290AD853004AC7C9 /* XCRemoteSwiftPackageReference "mqtt-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sroebert/mqtt-nio.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		24B103B928551EC60092F56C /* MQTTNIO */ = {
+		248CA2B3290AD853004AC7C9 /* MQTTNIO */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 248CA2B2290AD853004AC7C9 /* XCRemoteSwiftPackageReference "mqtt-nio" */;
 			productName = MQTTNIO;
 		};
-		24B58CC52852702200A1F9E4 /* MQTTNIO */ = {
+		248CA2B5290AD8E1004AC7C9 /* MQTTNIO */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 248CA2B2290AD853004AC7C9 /* XCRemoteSwiftPackageReference "mqtt-nio" */;
+			productName = MQTTNIO;
+		};
+		248CA2B7290ADA70004AC7C9 /* MQTTNIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 248CA2B2290AD853004AC7C9 /* XCRemoteSwiftPackageReference "mqtt-nio" */;
 			productName = MQTTNIO;
 		};
 /* End XCSwiftPackageProductDependency section */

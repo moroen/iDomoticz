@@ -7,29 +7,18 @@
 
 import SwiftUI
 
-class UserProgress: ObservableObject {
-    @Published var score = 0
-}
-
-struct InnerView: View {
-    @ObservedObject var progress: DomoticzData
-    @State private var maxWidth: CGFloat = .zero
-
-    var body: some View {
-        Button("Increase Score") {
-            print(progress.rooms)
-        }
-    }
-}
-
 struct MainView: View {
     // @StateObject var domoticzData = Domoticz.controller.domoticzData
 
     @StateObject var domoticzData = DomoticzData.shared
 
-    @State var selected = 4
+    @State var selected = 0
 
     var body: some View {
+        VStack {
+            #if os(tvOS)
+            ClockWidget()
+            #endif
         TabView(selection: $selected) {
             FavoritesView(domoticzData: domoticzData)
                 .tabItem {
@@ -50,10 +39,16 @@ struct MainView: View {
                     Label("Scenes", systemImage: "theatermasks")
                 }.tag(3)
 
+            SensorsView(domoticzData: domoticzData)
+                .tabItem {
+                    Label("Sensors", image: "sensors")
+                }.tag(4)
+            
             CustomSettingsView(domoticzData: domoticzData)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
-                }.tag(4)
+                }.tag(5)
+        }
         }
     }
 }

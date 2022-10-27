@@ -29,3 +29,38 @@ struct DomoticzRoom: Codable, Identifiable {
         case idx
     }
 }
+
+extension DomoticzData {
+    func GetRooms() {
+        guard let URL = URL(string: "\(self.settings.domoticzConfig.server)/json.htm?type=plans&order=name&used=true")
+        else {
+            print("Unable to set temps URL")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: URL) { data, _, error in
+            if let error = error {
+                print(error)
+                return
+            }
+
+            guard let data = data
+            else {
+                print("Unabe to let rooms data")
+                return
+            }
+
+            guard let allRooms = try? JSONDecoder().decode(DomoticzRooms.self, from: data)
+            else {
+                print("Rooms decoder failed")
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.rooms = allRooms.result
+            }
+
+        }.resume()
+        
+    }
+}

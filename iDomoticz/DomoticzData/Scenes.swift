@@ -6,53 +6,13 @@
 //
 
 import Foundation
-
-/*
- struct DomoticzScene:Codable {
-
- var name: String?
- var sceneid: String?
-
- private enum CodingKeys: String, CodingKey {
- case name
- case sceneid = "idx"
- }
- }
-
- struct DomoticzScenes: Codable {
- var DayLength: String?
- var Result: [DomoticzScene]
-
- private enum CodingKeys: String, CodingKey {
- case DayLength
- case Result = "result"
- }
-
- private enum CollectionCodingKeys: String, CodingKey {
- case Result = "result"
- }
-
- init(from decoder: Decoder) throws {
- let container = try decoder.container(keyedBy: CodingKeys.self)
- let collection = try container.nestedContainer(keyedBy: CollectionCodingKeys.self, forKey: .Result)
- Result = try collection.decode([DomoticzScene].self, forKey: .Result)
- }
- }
- */
-
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
-
-import Foundation
 import SwiftUI
 
 // MARK: - Welcome
 
 struct DomoticzScenes: Codable {
     let status, title: String
-    let result: [DomoticzScene]
+    let result: [DomoticzSceneDefinition]
 
     enum CodingKeys: String, CodingKey {
         case result
@@ -63,7 +23,7 @@ struct DomoticzScenes: Codable {
 
 // MARK: - Result
 
-struct DomoticzScene: Codable, Identifiable {
+struct DomoticzSceneDefinition: Codable, Identifiable {
     let resultDescription: String
     let favorite: Int
     let lastUpdate, name, offAction, onAction: String
@@ -90,6 +50,59 @@ struct DomoticzScene: Codable, Identifiable {
     }
 }
 
+class DomoticzScene: ObservableObject, Identifiable {
+    let info: DomoticzSceneDefinition
+
+    init(definition: DomoticzSceneDefinition) {
+        self.info = definition
+    }
+
+    public func activate() {
+        let cmd = "type=command&param=switchscene&idx=\(self.info.idx)&switchcmd=On"
+        DomoticzData.shared.DoJsonCommand(cmd: cmd)
+    }
+}
+
+extension DomoticzData {
+    func GetScenes() {
+        guard let URL = URL(string: "\(self.settings.domoticzConfig.server)/json.htm?type=scenes")
+        else {
+            print("Unable to set scenes URL")
+            return
+        }
+
+        URLSession.shared.dataTask(with: URL) { data, _, error in
+            if let error = error {
+                print(error)
+                return
+            }
+
+            guard let data = data
+            else {
+                print("Unabe to let scenes data")
+                return
+            }
+
+            guard let all = try? JSONDecoder().decode(DomoticzScenes.self, from: data)
+            else {
+                print("Scenes decoder failed")
+                return
+            }
+
+            DispatchQueue.main.async {
+                all.result.forEach { res in
+                    let row = self.scenes.firstIndex(where: { $0.info.idx == res.idx })
+                    if row == nil {
+                        self.scenes.append(DomoticzScene(definition: res))
+                    } else {
+                        self.scenes[row!] = DomoticzScene(definition: res)
+                    }
+                }
+            }
+        }.resume()
+    }
+}
+
 struct SceneButton: View {
     @State private var maxWidth: CGFloat = .zero
 
@@ -97,37 +110,22 @@ struct SceneButton: View {
 
     var body: some View {
         Button(action: {
-            activateScene(sceneid: scene.idx)
+            scene.activate()
         }) {
             HStack {
                 Image(systemName: "theatermasks")
-                Text(scene.name)
+                Text(scene.info.name)
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-        }
-    }
-
-    private func rectReader(_ binding: Binding<CGFloat>) -> some View {
-        return GeometryReader { gp -> Color in
-            DispatchQueue.main.async {
-                binding.wrappedValue = max(binding.wrappedValue, gp.frame(in: .local).width)
-            }
-            return Color.clear
         }
     }
 }
 
-func activateScene(sceneid: String) {
-    guard let url = URL(string: "http://zwave.local:8080/json.htm?type=command&param=switchscene&idx=\(sceneid)&switchcmd=On")
-    else {
-        return
-    }
+struct ScenesList: View {
+    let scenes: [DomoticzScene]
 
-    let task = URLSession.shared.dataTask(with: url, completionHandler: { _, _, error in
-        if let error = error {
-            print(error)
-            return
+    var body: some View {
+        ForEach(scenes) { scene in
+            SceneButton(scene: scene)
         }
-
-    })
-    task.resume()
+    }
 }

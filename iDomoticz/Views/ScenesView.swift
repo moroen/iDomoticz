@@ -34,12 +34,4 @@ struct ScenesView: View {
     }
 }
 
-struct ScenesList: View {
-    let scenes: [DomoticzScene]
 
-    var body: some View {
-        ForEach(scenes) { scene in
-            SceneButton(scene: scene)
-        }
-    }
-}

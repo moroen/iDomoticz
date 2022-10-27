@@ -39,16 +39,4 @@ struct LightsView<Content: View>: View {
     }
 }
 
-struct LightsList: View {
-    let lights: [DomoticzLight]
 
-    var body: some View {
-        ForEach(lights) { light in
-            if light.info.switchTypeCode == 16 {
-                BlindsButton(light: light)
-            } else {
-                LightButton(light: light)
-            }
-        }
-    }
-}

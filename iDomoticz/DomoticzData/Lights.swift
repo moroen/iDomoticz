@@ -24,7 +24,7 @@ struct DomoticzLights: Codable {
 
 // MARK: - Result
 
-struct DomoticzLightDefinition: Codable, Identifiable {
+struct DomoticzLightDefinition: Codable, Identifiable, DomoticzDeviceDefinition {
     let name, idx, planID: String
     var status: String
     let switchType: String
@@ -45,41 +45,75 @@ struct DomoticzLightDefinition: Codable, Identifiable {
     }
 }
 
-class DomoticzLight: ObservableObject, Identifiable, DomoticzDevice {
-    @Published var info: DomoticzLightDefinition
-
+class DomoticzLight: DomoticzDevice, Identifiable {
+    
     var id = UUID()
 
     init(definition: DomoticzLightDefinition) {
-        info = definition
+        super.init(definition: definition)
         if info.switchTypeCode == 7, info.status != "Off" {
             info.status = info.level > 0 ? "On" : "Off"
         }
     }
 
-    
-    public func UpdateStatus(status: String) {
-        DispatchQueue.main.async {
-            self.info.status = status
-        }
+    public func ToggleStatus() {
+        info.status = info.status == "On" ? "Off" : "On"
+        setStatus(status: info.status)
     }
     
-    public func SetStatus(status: String) {
+    override public func setStatus(status: String) {
         let cmd = "type=command&param=switchlight&idx=\(info.idx)&switchcmd=\(status)"
         print(cmd)
         DomoticzData.shared.DoJsonCommand(cmd: cmd)
         if !Settings().mqttConfig.enabled {
             print("Manual status update")
-            self.UpdateStatus(status: status)
+            self.updateStatus(status: status)
         }
-    }
-
-    public func ToggleStatus() {
-        info.status = info.status == "On" ? "Off" : "On"
-        SetStatus(status: info.status)
     }
 }
 
+extension DomoticzData {
+    public func GetLights() -> Void {
+        guard let lightsURL = URL(string: "\(self.settings.domoticzConfig.server)/json.htm?type=devices&filter=light&used=true")
+        else {
+            print("Unable to set lights URL")
+            return
+        }
+                
+        URLSession.shared.dataTask(with: lightsURL) { data, _, error in
+            if let error = error {
+                print(error)
+                return
+            }
+
+            guard let data = data
+            else {
+                print("Unabe to let lights data")
+                return
+            }
+
+            guard let allLights = try? JSONDecoder().decode(DomoticzLights.self, from: data)
+            else {
+                print("Devices decoder failed")
+                return
+            }
+
+            DispatchQueue.main.async {
+                allLights.result.forEach { res in
+                    let row = self.lights.firstIndex(where: { $0.info.idx == res.idx })
+                    if row == nil {
+                        self.lights.append(DomoticzLight(definition: res))
+                    } else {
+                        self.lights[row!] = DomoticzLight(definition: res)
+                    }
+                }
+            }
+
+        }.resume()
+    }
+
+}
+// Views
 struct LightButton: View {
     @ObservedObject var light: DomoticzLight
 
@@ -168,5 +202,19 @@ struct BlindsButton: View {
          }
          )
          */
+    }
+}
+
+struct LightsList: View {
+    let lights: [DomoticzLight]
+
+    var body: some View {
+        ForEach(lights) { light in
+            if light.info.switchTypeCode == 16 {
+                BlindsButton(light: light)
+            } else {
+                LightButton(light: light)
+            }
+        }
     }
 }

@@ -23,15 +23,17 @@ struct FavoritesView: View {
     var body: some View {
         #if os(tvOS)
             ScrollView {
+                // Text("Temperatures").font(.title)
+            
                 Text("Scenes").font(.title)
-                ScenesView(scenes: domoticzData.scenes.filter { $0.favorite == 1 })
+                ScenesView(scenes: domoticzData.scenes.filter { $0.info.favorite == 1 })
                 Text("Lights").font(.title)
-                LightsView(lights: domoticzData.lights.filter { $0.info.favorite == 1 }, header: { EmptyView() })
+                LightsView(lights: domoticzData.lights.filter { $0.favorite }, header: { EmptyView() })
             }
         #else
             List {
                 Section(header: Text("Scenes")) {
-                    ScenesList(scenes: domoticzData.scenes.filter { $0.favorite == 1 })
+                    ScenesList(scenes: domoticzData.scenes.filter { $0.info.favorite == 1 })
                 }
                 Section(header: Text("Lights")) {
                     LightsList(lights: domoticzData.lights.filter { $0.info.favorite == 1 })
